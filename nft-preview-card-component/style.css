@@ -1,0 +1,187 @@
+/*general*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Lexend+Deca&family=Manrope:wght@500;700&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&display=swap');
+
+* {
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Fraunces', serif;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+
+    background-color: hsl(217, 54%, 11%)
+}
+
+
+
+/*card*/
+
+.wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: 400px;
+    height: 640px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 2fr 2fr 0.1fr 1fr;
+
+
+}
+
+.equilibrium {
+    margin-top: 30px;
+    width: 325px;
+    height: 325px;
+}
+
+.outer {
+    height: 350px;
+}
+
+
+.below {
+    position: relative;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    width: 325px;
+    height: 323px;
+    bottom: 0px;
+    top: 30px;
+    text-align: center;
+    z-index: 1;
+}
+
+.view {
+    position: relative;
+    top: 140px;
+}
+
+
+.top {
+    position: absolute;
+    top: 6px;
+    z-index: 2;
+}
+
+.top:hover {
+    z-index: 0;
+}
+
+.outer:hover {
+    cursor: pointer;
+}
+
+
+.text {
+    margin-left: 42px;
+    margin-right: 42px;
+    color: hsl(215, 51%, 70%);
+
+}
+
+h1 {
+    margin-top: 15px;
+    font-size: 25px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+h1:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.p {
+    padding-bottom: 15px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eth {
+
+    margin-right: 8px;
+}
+
+.text-eth {
+    font-weight: 600;
+    color: hsl(178, 100%, 50%);
+}
+
+
+.clock {
+    margin-left: 120px;
+    margin-right: 5px;
+}
+
+.days {
+    margin-right: 2px;
+}
+
+.line {
+    width: 330px;
+    height: 1px;
+    background-color: hsl(215, 32%, 27%);
+}
+
+.flex-2 {
+    width: 330px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.jules {
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.text-jules {
+    margin-left: 10px;
+}
+
+.jules-1 {
+    color: hsl(215, 51%, 70%);
+}
+
+.jules-2 {
+    color: white;
+}
+
+.jules-2:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+
+}
+
+
+/*footer*/
+.attribution {
+    margin-top: 100px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
