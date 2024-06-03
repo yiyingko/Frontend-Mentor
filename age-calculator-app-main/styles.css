@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap');
+
+/*general*/
+body {
+    font-family: "Poppins", sans-serif;
+    display: grid;
+    place-items: center;
+    background-color: hsl(0, 0%, 94%);
+}
+
+/*main*/
+.container {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    place-items: start;
+    background-color: white;
+    width: 830px;
+    height: 650px;
+    border-radius: 3.5% 3.5% 25% 3.5%;
+    margin-top: 100px;
+}
+
+form {
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+.form-section {
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.5fr;
+}
+
+
+
+.title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 4px;
+    font-size: 15px;
+}
+
+.title-red {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: hsl(0, 100%, 67%);
+    letter-spacing: 4px;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+input {
+    display: block;
+    height: 65px;
+    width: 150px;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 700;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%, 86%);
+    color: hsl(0, 1%, 44%);
+    padding-left: 20px;
+}
+
+input:hover {
+    border: 1px solid hsl(259, 100%, 65%);
+    cursor: pointer;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid hsl(259, 100%, 65%);
+    outline: none;
+}
+
+
+.Msg {
+    height: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+    color: hsl(0, 100%, 67%);
+    padding: 0;
+}
+
+.form-container {
+    width: 700px;
+    border-bottom: 2px solid hsl(0, 0%, 86%);
+    margin-left: 70px;
+}
+
+
+
+
+button {
+    width: 95px;
+    height: 95px;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    outline: none;
+    background-image: url('assets/images/icon-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    position: relative;
+    top: 110px;
+    left: 60px;
+    border: 0px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 8%);
+}
+
+button:focus {
+    outline: none;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    margin-top: 60px;
+    font-style: italic;
+    line-height: 1.1;
+
+}
+
+.result {
+    font-size: 90px;
+    font-weight: 800;
+    color: hsl(259, 100%, 65%);
+}
+
+.result-text {
+    font-size: 90px;
+    font-weight: 800;
+    color: hsl(0, 0%, 8%);
+}
+
+/* validation styles */
+input.invalid {
+    border-color: hsl(0, 100%, 67%);
+}
+
+
+input.valid {
+    border-color: hsl(259, 100%, 65%);
+}

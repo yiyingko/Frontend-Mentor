@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="form-container">
+        <form class="form">
+          <div class="form-section">
+            <div id="title-day" class="title test">Day</div>
+            <input type="text" name="day" id="day" placeholder="DD" required />
+            <div class="Msg" id="dayMsg"></div>
+          </div>
+          <div class="form-section">
+            <div id="title-month" class="title test">Month</div>
+            <input
+              type="text"
+              name="month"
+              id="month"
+              placeholder="MM"
+              required
+            />
+            <div class="Msg" id="monthMsg"></div>
+          </div>
+          <div class="form-section">
+            <div id="title-year" class="title test">Year</div>
+            <input
+              type="text"
+              name="year"
+              id="year"
+              placeholder="YYYY"
+              required
+            />
+            <div class="Msg" id="yearMsg"></div>
+          </div>
+          <div class="btn">
+            <button
+              type="button"
+              name="submit"
+              value="Submit"
+              onclick="ageCount()"
+            ></button>
+          </div>
+        </form>
+      </div>
+
+      <div class="result-container">
+        <div class="result-div">
+          <span id="years" class="result">--</span
+          ><span class="result-text"> years</span>
+        </div>
+        <div class="result-div">
+          <span id="months" class="result">--</span
+          ><span class="result-text"> months</span>
+        </div>
+        <div class="result-div">
+          <span id="days" class="result">--</span
+          ><span class="result-text"> days</span>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
