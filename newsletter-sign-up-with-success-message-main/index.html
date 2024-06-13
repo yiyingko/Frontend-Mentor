@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <div class="form-wrapper">
+      <div class="sign-up">
+        <div>
+          <h1 class="sign-up-h1">Stay updated!</h1>
+          <p class="sign-up-p">
+            Join 60,000+ product managers receiving monthly<br />
+            updates on:
+          </p>
+          <ul>
+            <li><span>Product discovery and building what matters</span></li>
+            <li><span>Measuring to ensure updates are a success</span></li>
+            <li><span>And much more!</span></li>
+          </ul>
+        </div>
+        <form>
+          <label class="label" for="email">Email address</label
+          ><span id="msg" class="hidden">Valid email required.</span><br />
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="email@company.com"
+            required
+          />
+          <button
+            class="sign-up-btn btn submit"
+            type="button"
+            name="submit"
+            value="Submit"
+            onclick="swapPage()"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+      <img
+        src="assets/images/illustration-sign-up-desktop.svg"
+        alt="Italian Trulli"
+      />
+    </div>
+
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <div class="message hidden">
+      <div class="msg-wrapper">
+        <img
+          class="success-icon"
+          src="/assets/images/icon-success.svg"
+          alt="icon"
+        />
+        <h1 class="msg-h1">Thanks for subscribing!</h1>
+        <p class="msg-p">
+          A confirmation email has been sent to
+          <span id="email-value" class="msg-email"></span>. Please open it and
+          click the button inside to confirm your subscription.
+        </p>
+        <button class="msg-btn btn" onclick="dissMissMsg()">
+          Dismiss message
+        </button>
+      </div>
+    </div>
+
+    <!-- Success message end -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Yi-Ying Ko</a>.
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
