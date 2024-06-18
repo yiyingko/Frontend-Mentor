@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /*Primary*/
+    --moderate-violet: hsl(263, 55%, 52%);
+    --light-violet: hsl(263, 50%, 71%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    /*Neutral*/
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --slightly-dark-gray: hsl(236, 13%, 54%);
+}
+
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+    background-color: var(--light-grayish-blue);
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+}
+
+.grid-wrapper {
+    display: grid;
+    width: 1230px;
+    height: 650px;
+    grid-template-areas:
+        "a a b c"
+        "d e e c";
+    gap: 20px;
+
+}
+
+.grid-item {
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2.6fr;
+
+}
+
+.grid-item-kira {
+    grid-template-rows: 1fr 1fr 6fr;
+}
+
+
+.grid-item-daniel {
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-size: 20%;
+}
+
+#daniel {
+    width: 615px;
+    height: 310px;
+    grid-area: a;
+    background-color: var(--moderate-violet);
+}
+
+#jonathan {
+    width: 280px;
+    height: 310px;
+    grid-area: b;
+    background-color: var(--very-dark-grayish-blue);
+    position: relative;
+    right: 8px;
+}
+
+#kira {
+    width: 260px;
+    height: 645px;
+    grid-area: c;
+    background-color: var(--white);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#jeanette {
+    width: 270px;
+    height: 310px;
+    grid-area: d;
+    background-color: var(--white);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+#patrick {
+    width: 630px;
+    height: 310px;
+    grid-area: e;
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.person {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 190px;
+    height: 60px;
+    place-items: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: cneter;
+    margin-left: 18px;
+}
+
+.circle-daniel {
+    background-color: var(--light-violet);
+}
+
+.circle-patrick {
+    background-color: var(--moderate-violet);
+}
+
+
+img {
+    border-radius: 52%;
+    width: 86%;
+    position: relative;
+    left: 3px;
+    top: 3.5px;
+}
+
+.person-name {
+    color: var(--white);
+    font-size: 13.7px;
+    font-weight: 500;
+    margin-left: 0px;
+}
+
+.person-name-gray {
+    color: var(--very-dark-grayish-blue);
+}
+
+.title {
+    color: var(--light-gray);
+    font-weight: 400;
+}
+
+.title-gray {
+    color: var(--slightly-dark-gray);
+}
+
+
+.person-quote {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--light-grayish-blue);
+    margin-bottom: 10px;
+}
+
+.person-quote-gray {
+    color: var(--very-dark-grayish-blue);
+}
+
+
+
+.person-comment {
+    margin-left: 35px;
+    margin-right: 35px;
+    font-size: 13.4px;
+    color: var(--light-gray);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.person-comment-gray {
+    color: var(--slightly-dark-gray);
+}
+
+/*footer*/
+
+.attribution {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: 400;
+    font-size: 13px;
+}
