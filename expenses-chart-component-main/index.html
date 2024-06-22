@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="chart">
+      <div class="balance"><div class="balance-text">My balance<br /><span class="balance-sum"> $921.48</span></div></div>
+      <div class="gragh">
+        <h1>Spending - Last 7 days</h1>
+        <canvas id="myChart"></canvas>
+        <div class="total"><div class="total-text"><div class="text-1">Total this month<br /><span class="total-month">$478.33<span></div><div class="text-2"><span class="percentage">+2.4%</span><br /> from last month</div></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="chart_types">
+         <button onclick="setChartType('bar')">B</button>
+         <button onclick="setChartType('line')">L</button>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
