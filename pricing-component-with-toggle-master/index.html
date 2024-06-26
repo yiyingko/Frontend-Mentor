@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="pricing">
+        <div class="pricing-wrapper">
+          <h1>Our Pricing</h1>
+          <div>
+            <span class="plan-switch">Annually</span>
+            <label class="switch">
+              <input
+                class="toggleSwitch"
+                type="checkbox"
+                checked="true"
+                onclick="toggleSwitch()"
+              />
+              <span class="slider"></span>
+            </label>
+            <span class="plan-switch">Monthly</span>
+          </div>
+        </div>
+      </div>
+      <div class="plans">
+        <div class="card card-1">
+          <div class="card-wrapper">
+            <h2>Basic</h2>
+            <div class="dollar">
+              <span class="monthPlan">&dollar;19.99</span
+              ><span class="yearPlan hidden">&dollar;199.99</span>
+            </div>
+            <div class="text text-1">
+              <div class="text-wrap">500 GB Storage</div>
+            </div>
+            <div class="text">2 Users Allowed</div>
+            <div class="text">Send up to 3 GB</div>
+            <div class="module-border-wrap">
+              <button onclick="window.location.href=''">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-2">
+          <div class="card-wrapper">
+            <h2>Professional</h2>
+            <div class="dollar">
+              <span class="monthPlan">&dollar;24.99</span
+              ><span class="yearPlan hidden">&dollar;249.99</span>
+            </div>
+            <div class="text text-1">
+              <div class="text-wrap">1 TB Storage</div>
+            </div>
+            <div class="text">5 Users Allowed</div>
+            <div class="text">Send up to 10 GB</div>
+            <div class="module-border-wrap">
+              <button onclick="window.location.href=''">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-3">
+          <div class="card-wrapper">
+            <h2>Master</h2>
+            <div class="dollar">
+              <span class="monthPlan">&dollar;39.99</span
+              ><span class="yearPlan hidden">&dollar;399.99</span>
+            </div>
+            <div class="text text-1">
+              <div class="text-wrap">2 TB Storage</div>
+            </div>
+            <div class="text">10 Users Allowed</div>
+            <div class="text">Send up to 20 GB</div>
+            <div class="module-border-wrap">
+              <button onclick="window.location.href=''">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >
+      >. Coded by <a href="#">Yi-Ying Ko</a>.
+    </div>
+    <script>
+      const checkBox = document.querySelector('.toggleSwitch');
+      const monthPlans = document.querySelectorAll('.monthPlan');
+      const yearPlans = document.querySelectorAll('.yearPlan');
+
+      checkBox.checked = 'true';
+
+      function toggleSwitch() {
+        if (checkBox.checked == false) {
+          monthPlans.forEach((monthPlan) => monthPlan.classList.add('hidden'));
+          yearPlans.forEach((yearPlan) => yearPlan.classList.remove('hidden'));
+        } else {
+          monthPlans.forEach((monthPlan) =>
+            monthPlan.classList.remove('hidden')
+          );
+          yearPlans.forEach((yearPlan) => yearPlan.classList.add('hidden'));
+        }
+      }
+    </script>
+  </body>
+</html>

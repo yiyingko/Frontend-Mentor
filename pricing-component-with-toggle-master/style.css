@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /*Primary*/
+    --linear-gradient: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 90%);
+    /*Neutral*/
+    --very-light-grayish-blue: hsl(240, 78%, 98%);
+    --light-grayish-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --dark-grayish-blue: hsl(232, 13%, 33%);
+    --white: white;
+    --box-shadow-gray: hsl(240, 3%, 86%);
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    background-color: var(--very-light-grayish-blue);
+    background-image: url(images/bg-bottom.svg), url(images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-size: 23.2%;
+    background-position: bottom -35% left, top right;
+    display: grid;
+    place-items: center;
+
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/*main*/
+.container {
+    width: 1400px;
+    height: 750px;
+    margin-top: 60px;
+    display: grid;
+    place-items: center;
+}
+
+.pricing {
+    width: 1400px;
+    height: 140px;
+    display: grid;
+    place-items: center;
+}
+
+.pricing-wrapper {
+    width: 500px;
+    height: 140px;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    color: var(--grayish-blue);
+    font-size: 32px;
+}
+
+.plan-switch {
+    color: var(--light-grayish-blue);
+    position: relative;
+    top: 6px;
+    font-size: 15px;
+
+}
+
+/*swith example w3schools modify*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 31.13px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--linear-gradient);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--very-light-grayish-blue);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-image: var(--linear-gradient);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--light-grayish-blue);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+}
+
+
+
+/*plans*/
+
+.plans {
+    width: 1120px;
+    height: 610px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.card {
+    width: 380px;
+    height: 480px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-gray) 0px 4px 12px;
+    display: grid;
+    place-items: center;
+}
+
+.card-1 {
+    border-radius: 12px 0 0 12px;
+
+}
+
+.card-2 {
+    width: 380px;
+    height: 530px;
+    background-image: var(--linear-gradient);
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.card-3 {
+    border-radius: 0 12px 12px 0;
+}
+
+.card-wrapper {
+    width: 300px;
+    height: 460px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1.2fr 1.2fr 1.2fr 2fr;
+    place-items: center;
+}
+
+h2 {
+    color: var(--grayish-blue);
+    font-size: 20px;
+}
+
+.dollar {
+    width: 300px;
+    height: 100px;
+    font-size: 60px;
+    color: var(--dark-grayish-blue);
+    text-align: center;
+}
+
+.text {
+    width: 300px;
+    height: 60px;
+    color: var(--grayish-blue);
+    border-bottom: 1px solid var(--light-grayish-blue);
+    text-align: center;
+    display: grid;
+    place-items: center;
+
+}
+
+.text-1 {
+    border-top: 1px solid var(--light-grayish-blue);
+}
+
+button {
+    width: 300px;
+    height: 50px;
+    background: var(--linear-gradient);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: var(--very-light-grayish-blue);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+button:hover {
+    background: var(--white);
+    color: hsl(237, 63%, 64%);
+}
+
+.module-border-wrap {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    background: var(--linear-gradient);
+    padding: 1px;
+}
+
+.card-2 button {
+    background: var(--white);
+    color: hsl(237, 63%, 64%);
+}
+
+.card-2 button:hover {
+    background: var(--linear-gradient);
+    color: var(--white);
+}
+
+.card-2 .module-border-wrap:hover {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    background: var(--white);
+    padding: 1px;
+}
+
+.card-2 .card-wrapper h2 {
+    color: var(--white);
+}
+
+.card-2 .card-wrapper .dollar {
+    color: var(--white);
+}
+
+.card-2 .card-wrapper .text {
+    color: var(--white);
+    border-bottom: .5px groove var(--very-light-grayish-blue);
+}
+
+.card-2 .card-wrapper .text-1 {
+    border-top: 1px groove var(--very-light-grayish-blue);
+}
+
+/*footer*/
+.attribution {
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
