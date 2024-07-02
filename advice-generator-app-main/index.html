@@ -17,8 +17,8 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="heading">Advice #<span class="advice-id">169</span></h1>
-      <q>Do something selfless</q>
+      <h1 id="heading">Advice #<span class="advice-id"></span></h1>
+      <q></q>
       <div class="divider-wrapper">
         <div>
           <img class="divider-img" src="images/pattern-divider-desktop.svg" alt="divider" />
@@ -36,9 +36,15 @@
       >. Coded by <a href="#">Yi-Ying ko</a>.
     </div>
     <script>
-      function makeAdvice() {
-        let slip_id = Math.floor(Math.random() * 223) + 1;
-        fetch(`https://api.adviceslip.com/advice/${slip_id}`)
+
+      window.onload = () => {
+        makeAdvice();
+      };
+      
+      function makeAdvice() {     
+        // let slip_id = Math.floor(Math.random() * 223) + 1;
+        // fetch(`https://api.adviceslip.com/advice/${slip_id}`)
+        fetch('https://api.adviceslip.com/advice', { cache: 'no-store' })
           .then((response) => {
             if (!response.ok) {
               throw new Error(`Response status: ${response.status}`);
