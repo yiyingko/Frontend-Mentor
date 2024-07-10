@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile">
+        <div class="person">
+          <div class="jeremy-wrap"><img class="jeremy-img" src="images/image-jeremy.png" alt="jeremy-photo"></div>
+          <div>
+            <span class="title-1">Report for</span><br />
+            <h1 class="title-2">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="time-range">
+          <div class="btn" id="dailyBtn" onclick="updateTimeframes('daily')">
+            Daily
+          </div>
+          <div class="btn" id="weeklyBtn" onclick="updateTimeframes('weekly')">
+            Weekly
+          </div>
+          <div
+            class="btn"
+            id="monthlyBtn"
+            onclick="updateTimeframes('monthly')"
+          >
+            Monthly
+          </div>
+        </div>
+      </div>
+      <div class="grid-item work img-size">
+        <div class="display">
+          <div class="task-wrapper">
+            <div class="task">
+              Work<img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+            <div class="task-current"><span class="work-cur"></span>hrs</div>
+            <div class="task-last">
+              <span class="last"></span> - <span class="work-pre"></span> hrs
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item play img-size">
+        <div class="display">
+          <div class="task-wrapper">
+            <div class="task">
+              Play<img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+            <div class="task-current"><span class="play-cur"></span>hrs</div>
+            <div class="task-last">
+              <span class="last"></span> - <span class="play-pre"></span> hrs
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item study img-size">
+        <div class="display">
+          <div class="task-wrapper">
+            <div class="task">
+              Study<img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+            <div class="task-current"><span class="study-cur"></span>hrs</div>
+            <div class="task-last">
+              <span class="last"></span> - <span class="study-pre"></span> hrs
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item exercise img-size">
+        <div class="display">
+          <div class="task-wrapper">
+            <div class="task">
+              Exercise<img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+            <div class="task-current">
+              <span class="exercise-cur"></span>hrs
+            </div>
+            <div class="task-last">
+              <span class="last"></span> -
+              <span class="exercise-pre"></span> hrs
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item social img-size">
+        <div class="display">
+          <div class="task-wrapper">
+            <div class="task">
+              Social<img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+            <div class="task-current"><span class="social-cur"></span>hrs</div>
+            <div class="task-last">
+              <span class="last"></span> - <span class="social-pre"></span> hrs
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item self-care img-size">
+        <div class="display">
+          <div class="task-wrapper">
+            <div class="task">
+              Self Care<img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+            <div class="task-current"><span class="self-care-cur"></span>hrs</div>
+            <div class="task-last">
+              <span class="last"></span> - <span class="self-care-pre"></span> hrs
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Yi-Ying Ko</a>.
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
