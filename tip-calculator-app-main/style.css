@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@layer base {
+
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield !important;
+    }
+}
+
+:root {
+    /*Primary*/
+    --strong-cyan: hsl(172, 67%, 45%);
+    /*Neutral*/
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --err-red: hsl(351, 92%, 65%);
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
+    background-color: var(--light-grayish-cyan);
+    display: grid;
+    place-items: center;
+
+}
+
+.container {
+    width: 70%;
+    height: 97vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    width: 10%;
+    height: 10%;
+    font-size: 105%;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    margin-top: 8%;
+    color: var(--very-dark-cyan);
+}
+
+.main {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.calculator {
+    width: 850px;
+    height: 65%;
+    background-color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: var(--grayish-cyan) 0px 4px 12px;
+}
+
+.left {
+    width: 43%;
+    height: 85%;
+    margin-left: 1%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+label {
+    font-size: 70%;
+    color: var(--dark-grayish-cyan);
+    margin-left: 1%;
+}
+
+.left-1 {
+    width: 100%;
+    height: 25%;
+}
+
+.left-2 {
+    width: 100%;
+    height: 38%;
+}
+
+.tips-options {
+    width: 100%;
+    height: 92%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1%;
+    margin-top: 1%;
+    place-items: center;
+}
+
+.tip {
+    font-family: "Space Mono", monospace;
+    width: 93%;
+    height: 78%;
+    font-size: 90%;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    text-align: center;
+    border: 0;
+    border-radius: 8px;
+}
+
+.tip:hover {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.custom-input {
+    font-family: "Space Mono", monospace;
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.custom-input:hover {
+    background-color: var(--white);
+    border: 2px solid var(--strong-cyan);
+}
+
+.custom-input:focus {
+    background-color: var(--white);
+    border: 2px solid var(--strong-cyan);
+    outline: none;
+}
+
+.custom-valid {
+    font-family: "Space Mono", monospace;
+    width: 92%;
+    height: 78%;
+    font-size: 90%;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--very-dark-cyan);
+    text-align: center;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid var(--strong-cyan);
+}
+
+.custom-invalid {
+    outline: none;
+    border: 2px solid var(--err-red);
+    font-family: "Space Mono", monospace;
+    width: 92%;
+    height: 78%;
+    font-size: 90%;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--err-red);
+    text-align: center;
+    border-radius: 8px;
+}
+
+.custom-invalid:focus {
+    outline: none;
+    border: 2px solid var(--err-red);
+}
+
+::placeholder {
+    color: var(--dark-grayish-cyan);
+    font-size: 110%;
+    letter-spacing: 1px;
+    font-weight: 700;
+    opacity: 1;
+    /* Firefox */
+}
+
+.input-long,
+.valid {
+    font-family: "Space Mono", monospace;
+    width: 96%;
+    height: 50%;
+    border: 0;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 100%;
+    margin-top: 1%;
+    text-align: end;
+    padding: 2%;
+    outline: none;
+}
+
+
+input:hover {
+    border: 2px solid var(--strong-cyan);
+    outline: none;
+    cursor: pointer;
+}
+
+.input-long:focus {
+    border: 2px solid var(--strong-cyan);
+    outline: none;
+}
+
+
+.invalid {
+    font-family: "Space Mono", monospace;
+    width: 100%;
+    height: 50%;
+    border: 0;
+    color: var(--very-dark-cyan);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 100%;
+    margin-top: 1%;
+    text-align: end;
+    padding: 2%;
+    outline: none;
+    border: 2px solid var(--err-red);
+}
+
+.invalid:focus {
+    border: 2px solid var(--err-red);
+}
+
+#bill {
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-size: 3%;
+    background-position-x: left 3%;
+    background-position-y: center;
+}
+
+#people {
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-size: 3%;
+    background-position-x: left 3%;
+    background-position-y: center;
+}
+
+.left-3 {
+    width: 100%;
+    height: 25%;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.msg {
+    font-size: 70%;
+    color: var(--err-red);
+    margin-right: 3%;
+}
+
+.right {
+    width: 43%;
+    height: 85%;
+    background-color: var(--very-dark-cyan);
+    border-radius: 15px;
+    margin-right: 1%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display {
+    width: 85%;
+    height: 40%;
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.display-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.display-title {
+    font-size: 70%;
+    color: var(--white);
+}
+
+.display-title-2 {
+    font-size: 80%;
+    color: var(--dark-grayish-cyan);
+}
+
+.amount {
+    font-size: 180%;
+    color: var(--strong-cyan);
+}
+
+.reset-btn {
+    width: 85%;
+    height: 18%;
+    background-color: var(--strong-cyan);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 75%;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--very-dark-cyan);
+    text-align: center;
+    display: inline-block;
+}
+
+.reset-btn:hover {
+    background-color: var(--light-grayish-cyan);
+}
+
+.attribution {
+    font-size: 70%;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .calculator {
+        width: 600px;
+        height: 65%;
+    }
+
+    .msg {
+        font-size: 50%;
+    }
+
+    label {
+        font-size: 50%;
+    }
+
+    ::placeholder {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        padding: 10%;
+        margin-bottom: 10%;
+        margin-right: 20%;
+    }
+
+    .container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .main {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .calculator {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        border-radius: 15px 15px 0 0;
+
+    }
+
+    .left {
+        width: 85%;
+        height: 60vh;
+        margin-top: 15%;
+    }
+
+    .right {
+        width: 85%;
+        height: 35vh;
+        margin-bottom: 10%;
+    }
+
+    .msg {
+        font-size: 60%;
+    }
+
+    label {
+        font-size: 70%;
+    }
+
+    ::placeholder {
+        font-size: 80%;
+    }
+
+    .display-title {
+        font-size: 90%;
+        color: var(--white);
+    }
+
+    .reset-btn {
+        width: 85%;
+        height: 20%;
+        position: relative;
+        bottom: 10%;
+        text-align: center;
+        margin: auto;
+
+
+    }
+
+    .attribution {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .tips-options {
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .display-title {
+        font-size: 70%;
+    }
+
+    .left-3 {
+        margin-top: 15%;
+    }
+
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <h1>spli<br />tter</h1>
+        <div class="calculator">
+          <div class="left">
+            <div class="left-1">
+              <div class="title">
+                <label>Bill</label><span id="billMsg" class="msg"></span>
+              </div>
+              <input
+                class="input-bill input-long"
+                id="bill"
+                type="number"
+                name="number"
+              />
+            </div>
+            <div class="left-2">
+              <div class="title">
+                <label>Select Tip %</label>
+                <span id="customMsg" class="msg"></span>
+              </div>
+              <div class="tips-options">
+                <button class="tip" value="5">5%</button>
+                <button class="tip" value="10">10%</button>
+                <button class="tip" value="15">15%</button>
+                <button class="tip" value="25">25%</button>
+                <button class="tip" value="50">50%</button>
+                <input
+                  type="number"
+                  name="number"
+                  id="custom"
+                  class="tip custom-input"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+            <div class="left-3">
+              <div class="title">
+                <label>Number of People</label>
+                <span id="peopleMsg" class="msg"></span>
+              </div>
+              <input
+                id="people"
+                class="input-long num-people"
+                type="number"
+                name="person"
+              />
+            </div>
+          </div>
+          <div class="right">
+            <div class="display">
+              <div class="display-space">
+                <div class="display-title">
+                  Tip Amount<br /><span class="display-title-2">/ person</span>
+                </div>
+                <div id="tip_person" class="amount"></div>
+              </div>
+              <div class="display-space">
+                <div class="display-title">
+                  Total<br /><span class="display-title-2">/ person</span>
+                </div>
+                <div id="total_person" class="amount"></div>
+              </div>
+            </div>
+            <button class="display reset-btn" onclick="reset()">Reset</button>
+          </div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
