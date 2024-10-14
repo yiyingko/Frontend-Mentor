@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid-item card-img">
+        <div class="card-front">
+          <div class="front-1">
+            <span class="icon hidden" id="visa"
+              ><img src="images/visa_icon.png" alt="visa-icon"
+            /></span>
+            <span class="icon hidden" id="mastercard"
+              ><img src="images/mastercard_icon.png" alt="mastercard-icon"
+            /></span>
+            <span class="icon hidden" id="jcb"
+              ><img src="images/jcb_icon.png" alt="jcb-icon"
+            /></span>
+          </div>
+          <div class="front-2 cardNumberCard">0000 0000 0000 0000</div>
+          <div class="front-3">
+            <span class="nameCard">Jane Appleseed</span>
+            <div>
+              <span class="monthNumberCard">00</span>/<span
+                class="yearNumberCard"
+                >00</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="three-zero cvcNumberCard">000</div>
+        </div>
+      </div>
+      <div class="grid-item card-form rightCol">
+        <form id="form">
+          <label>Cardholder Name</label>
+          <input
+            class="details-input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="e.g. Jane Appleseed"
+            required
+            title="maxlength 40"
+            maxlength="40"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          />
+          <div class="msg" id="nameMsg"></div>
+          <div class="card-logo"><label>Card Number</label></div>
+          <input
+            class="details-input card-number"
+            type="text"
+            name="number"
+            id="cardNumber"
+            placeholder="e.g. 1234 5678 9123 0000"
+            required
+            maxlength="19"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          />
+          <div class="msg" id="cardNumberMsg"></div>
+          <div class="card-details">
+            <div class="exp-date">
+              <label>Exp. Date (MM/YY)</label>
+              <div class="exp">
+                <div class="exp-wrapper">
+                  <input
+                    class="exp-input"
+                    inputmode="numeric"
+                    name="month"
+                    id="monthNumber"
+                    placeholder="MM"
+                    title="01-12"
+                    required
+                    maxlength="2"
+                  />
+                  <div class="msg" id="monthNumberMsg"></div>
+                </div>
+                <div class="exp-wrapper">
+                  <input
+                    class="exp-input"
+                    inputmode="numeric"
+                    name="year"
+                    id="yearNumber"
+                    placeholder="YY"
+                    title="from 24-29"
+                    required
+                    maxlength="2"
+                  />
+                  <div class="msg" id="yearNumberMsg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="cvc">
+              <label>CVC</label>
+              <div class="cvc-wrapper">
+                <input
+                  class="exp-input cvc-input"
+                  inputmode="numeric"
+                  name="cvc"
+                  id="cvcNumber"
+                  placeholder="e.g. 123"
+                  title="3 digits"
+                  required
+                  maxlength="3"
+                />
+                <div class="msg" id="cvcNumberMsg"></div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="submit">Confirm</button>
+          <p class="test-number">
+            <br />JCB: 3550998650131033<br />
+            VISA: 4012888888881881<br />
+            Mastercard: 5555555555554444
+          </p>
+        </form>
+      </div>
+      <div class="grid-item card-form rightCol-2 hidden">
+        <div class="completed">
+          <div class="complete-wrap">
+            <img
+              class="complete-logo"
+              src="images/icon-complete.svg"
+              alt="click"
+            />
+          </div>
+          <div>
+            <h1>Thank you!</h1>
+            <br />
+            <p>We've added your card details</p>
+          </div>
+          <button type="button" class="continue">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="app.js"></script>
+  </body>
+</html>
