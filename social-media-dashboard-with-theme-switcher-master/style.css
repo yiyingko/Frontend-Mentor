@@ -26,6 +26,8 @@ html[data-theme="dark"] {
     --h1-text: hsl(0, 0%, 100%);
     --h2-text: hsl(0, 0%, 100%);
     --hover: hsl(228, 26%, 27%);
+    --slider: linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 90%);
+    --slider-hover: linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 90%);
 }
 
 html[data-theme="light"] {
@@ -37,6 +39,8 @@ html[data-theme="light"] {
     --h1-text: hsl(230, 17%, 14%);
     --h2-text: hsl(240, 6%, 43%);
     --hover: hsl(232, 33%, 91%);
+    --slider: linear-gradient(90deg, hsl(230, 22%, 74%) 0%, hsl(230, 22%, 74%)100%);
+    --slider-hover: linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 90%);
 }
 
 
@@ -341,7 +345,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: var(--linear-gradient);
+    background-image: var(--slider);
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 34px;
@@ -361,7 +365,11 @@ p {
 }
 
 input:checked+.slider {
-    background-image: var(--linear-gradient);
+    background-image: var(--slider);
+}
+
+input:checked+.slider:hover {
+    background-image: var(--slider-hover);
 }
 
 input:focus+.slider {
@@ -378,7 +386,6 @@ input:checked+.slider:before {
     display: grid;
     place-items: center;
     grid-template-columns: 2fr 1fr;
-    /* border: 2PX solid slategrey; */
 }
 
 h2 {
