@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Primary*/
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    --facebook: hsl(208, 92%, 53%);
+    --twitter: hsl(203, 89%, 53%);
+    ---youtube: hsl(348, 97%, 39%);
+    --instagram: linear-gradient(90deg, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
+    --linear-gradient: linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 90%);
+}
+
+html[data-theme="dark"] {
+    --color-bg: hsl(230, 17%, 14%);
+    --color-bg-top: hsl(232, 19%, 15%);
+    --card-bg: hsl(228, 28%, 20%);
+    --text: hsl(228, 34%, 66%);
+    --number: hsl(0, 0%, 100%);
+    --h1-text: hsl(0, 0%, 100%);
+    --h2-text: hsl(0, 0%, 100%);
+    --hover: hsl(228, 26%, 27%);
+}
+
+html[data-theme="light"] {
+    --color-bg: hsl(0, 0%, 100%);
+    --color-bg-top: hsl(225, 100%, 98%);
+    --card-bg: hsl(227, 47%, 96%);
+    --text: hsl(228, 12%, 44%);
+    --number: hsl(230, 17%, 14%);
+    --h1-text: hsl(230, 17%, 14%);
+    --h2-text: hsl(240, 6%, 43%);
+    --hover: hsl(232, 33%, 91%);
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to top,
+            var(--color-bg) 0%,
+            var(--color-bg)70%,
+            var(--color-bg-top)70%,
+            var(--color-bg-top) 100%);
+}
+
+.container {
+    width: 1200px;
+    height: 90vh;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 1fr;
+}
+
+.section {
+    width: 100%;
+    height: 92%;
+    display: grid;
+    place-items: center;
+}
+
+.mid-section {
+    width: 98%;
+    height: 90%;
+}
+
+
+/*first part*/
+.section-1 {
+    margin-top: 3%;
+    grid-template-rows: 1fr 3fr;
+}
+
+.mid-sec-h1 {
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.h1-wrap {
+    margin-left: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1 {
+    color: var(--h1-text);
+    margin-bottom: 5px;
+}
+
+p {
+    color: var(--text);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.social-total {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.5%;
+}
+
+.followers {
+    width: 99%;
+    height: 92%;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 0.1fr 1fr 1.5fr 1fr;
+    background-color: var(--card-bg);
+    border-radius: 3%;
+    cursor: pointer;
+}
+
+.followers-inner {
+    width: 95%;
+    height: 90%;
+    display: grid;
+    place-items: center;
+}
+
+.followers:hover {
+    background-color: var(--hover);
+}
+
+.followers-account {
+    width: 45%;
+    height: 80%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 4fr;
+    margin-top: 20px;
+}
+
+.followers-icon {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.followers-count {
+    font-size: 58px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.followers-name {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--text);
+    margin-right: 5px;
+}
+
+.followers-count {
+    color: var(--number)
+}
+
+.followers-unit {
+    color: var(--text);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 6px;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.today-up {
+    width: auto;
+    font-weight: 700;
+    font-size: 13px;
+    color: hsl(163, 72%, 41%);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 4fr;
+}
+
+.today-down {
+    width: auto;
+    font-weight: 700;
+    font-size: 13px;
+    color: hsl(356, 69%, 56%);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 4fr;
+}
+
+.icon-arrow {
+    width: 55%;
+}
+
+.top-fb {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+    background-color: var(--facebook)
+}
+
+.top-twitter {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+    background-color: var(--twitter)
+}
+
+.top-insta {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+    background: var(--instagram);
+}
+
+.top-youtube {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+    background-color: var(---youtube)
+}
+
+/* second part*/
+.section-2 {
+    height: 100%;
+    grid-template-rows: 1fr 5fr;
+    margin-bottom: 5%;
+}
+
+.mid-section-h2 {
+    height: 50%;
+    font-size: 18px;
+    color: var(--h2-text);
+}
+
+.social-today {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 7% 2.4%;
+}
+
+
+.views {
+    width: 99%;
+    height: 93%;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 1fr;
+    background-color: var(--card-bg);
+    border-radius: 2%;
+    cursor: pointer;
+}
+
+.views:hover {
+    background-color: var(--hover);
+}
+
+.views-inner {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.inner-1 {
+    color: var(--text);
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.inner-2 {
+    margin-bottom: 15px;
+}
+
+.views-number {
+    color: var(--number);
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.views-up {
+    width: auto;
+    font-weight: 700;
+    font-size: 13.3px;
+    color: hsl(163, 72%, 41%);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 4fr;
+}
+
+.views-down {
+    width: auto;
+    font-weight: 700;
+    font-size: 13px;
+    color: hsl(356, 69%, 56%);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 4fr;
+}
+
+
+/*swith example w3schools modify*/
+/* The switch - the box around the slider */
+.mode-switch {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 28px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--linear-gradient);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--color-bg-top);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-image: var(--linear-gradient);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px hsl(230, 22%, 74%);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.toggle {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 2fr 1fr;
+    /* border: 2PX solid slategrey; */
+}
+
+h2 {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+/*footer*/
+.attribution {
+    margin-top: 4%;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
