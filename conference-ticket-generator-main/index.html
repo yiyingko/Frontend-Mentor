@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="backbround-img">
+    <header>
+      <img src="assets/images/logo-full.svg" alt="conference name and logo" />
+    </header>
+    <main>
+      <!-- Form starts -->
+      <div class="main-container">
+        <h1>
+          Your Journey to Coding Conf<br />
+          2025 Starts Here!
+        </h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+        <form>
+          <div id="drop-area-container">
+            <label for="input-file" id="drop-area"
+              >Upload Avatar
+
+              <div class="dropBox">
+                <input
+                  type="file"
+                  accept="image/*"
+                  id="input-file"
+                  required
+                  hidden
+                />
+                <div id="image-view">
+                  <img id="upload-icon" src="assets/images/icon-upload.svg" />
+                </div>
+                <p class="drop-area-text">Drag and drop or click to upload</p>
+                <div class="alt-btn display-none chg-btn">Change image</div>
+              </div>
+            </label>
+          </div>
+          <div
+            class="alt-btn display-none rmv-btn"
+            onClick="removeImg()"
+            id="remove-button"
+          >
+            Remove image
+          </div>
+          <div class="img-info">
+            <div>
+              <!-- <img
+                class="info-icon"
+                src="assets/images/icon-info.svg"
+                alt="info-icon"
+              />
+              <img
+                class="info-icon-err hidden"
+                src="assets/images/icon-info-err.svg"
+                alt="red-info-icon"
+              /> -->
+              <svg
+                class="info-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  stroke="#D1D0D5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+                />
+                <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path
+                  stroke="#D1D0D5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042"
+                />
+              </svg>
+              <svg
+                class="info-icon-err hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  stroke="hsl(7, 88%, 67%)"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+                />
+                <path
+                  fill="hsl(7, 88%, 67%)"
+                  d="M8.004 10.462V7.596ZM8 5.57v-.042Z"
+                />
+                <path
+                  stroke="hsl(7, 88%, 67%)"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042"
+                />
+              </svg>
+            </div>
+            <span class="info-msg"
+              >Upload your photo (JPG or PNG, max size: 500KB)</span
+            >
+          </div>
+          <div class="submit-info">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" maxlength="25" required />
+            <div class="error-msg hidden" id="nameMsg">
+              <img src="assets/images/icon-info-err.svg" alt="red-info-icon" />
+              <span class="err-text"
+                >alphabetic characters only, max length 25</span
+              >
+            </div>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+              required
+            />
+            <div class="error-msg hidden" id="emailMsg">
+              <img
+                src="assets/images/icon-info-err.svg"
+                alt="red-info-icon"
+              /><span class="err-text">please enter correct email address</span>
+            </div>
+            <label for="github">GitHub Username</label>
+            <input
+              type="text"
+              name="github"
+              id="github"
+              placeholder="@yourusername"
+              required
+            />
+            <div class="error-msg hidden" id="githubMsg">
+              <img
+                src="assets/images/icon-info-err.svg"
+                alt="red-info-icon"
+              /><span class="err-text">github account @youraccountname</span>
+            </div>
+            <button class="submit" type="button" name="submit" value="Submit">
+              Generate My Ticket
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- Form ends -->
+
+      <!-- Generated tickets starts -->
+      <div class="ticket-container hidden">
+        <h1>
+          Congrats,<span class="h1-name">Jonatan Kristof</span>!<br />
+          Your ticket is ready.
+        </h1>
+        <p class="ticket-p">
+          We've emailed your ticket to <br /><span class="p-email"
+            >jonason@gmail.com</span
+          >
+          and will send updates in<br />the run up to the event.
+        </p>
+        <div class="ticket-img-wrapper">
+          <div class="grid-items ticket-title">
+            <div class="ticket-icon">
+              <img src="assets/images/logo-mark.svg" alt="ticket-icon" />
+            </div>
+            <div>
+              <div class="ticket-heading">Coding Conf</div>
+              <div class="ticket-date">Jan 31, 2025 / Austin, TX</div>
+            </div>
+          </div>
+          <div class="grid-items visitor">
+            <div class="visitor-photo"></div>
+            <div class="visitor-info">
+              <div class="visitor-name">Jonatan Name</div>
+              <div class="visitor-github">
+                <img
+                  class="github-icon"
+                  src="assets/images/icon-github.svg"
+                  alt="github icon"
+                />
+                <div class="github-account">@githubaccount</div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-items ticket-number"><span>#01609</span></div>
+        </div>
+      </div>
+      <!-- Generated tickets ends -->
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Yi-Ying Ko</a>.
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

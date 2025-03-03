@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Neutral*/
+    --neutral-0: hsl(0, 0%, 100%);
+    --neutral-300: hsl(252, 6%, 83%);
+    --neutral-500: hsl(245, 15%, 58%);
+    --neutral-700: hsl(245, 19%, 35%);
+    --neutral-900: hsl(248, 70%, 10%);
+    /*Orange*/
+    --orange-500: hsl(7, 88%, 67%);
+    --orange-700: hsl(7, 71%, 60%);
+    --gradient-text: linear-gradient(90deg, hsl(7deg 86% 67%) 0%, hsl(0deg 0% 100%) 100%);
+}
+
+body {
+    height: 100vh;
+    font-family: "Inconsolata", serif;
+    font-size: 20px;
+    display: grid;
+    place-items: center;
+    color: var(--neutral-0);
+}
+
+.backbround-img {
+    background-image:
+        url(assets/images/pattern-squiggly-line-bottom-desktop.svg),
+        url(assets/images/pattern-squiggly-line-top.svg),
+        url(assets/images/pattern-circle.svg),
+        url(assets/images/pattern-lines.svg),
+        url(assets/images/background-desktop.png);
+    background-repeat: no-repeat;
+
+    background-position:
+        bottom -8% left,
+        top 8% right,
+        right 27% bottom 40%,
+        center,
+        center;
+    background-size: 45%, 26%, 11%, 100%, cover;
+}
+
+/*header*/
+header {
+    width: 100vw;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+}
+
+/*hidden*/
+.hidden {
+    display: none !important;
+}
+
+/*main*/
+main {
+    height: 95vh;
+    display: grid;
+    place-items: center;
+}
+
+.main-container {
+    display: grid;
+    place-items: center;
+    width: 700px;
+    height: 700px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 3.5rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--neutral-0);
+    margin-bottom: 30px;
+}
+
+form {
+    width: 450px;
+    height: 540px;
+    display: grid;
+
+}
+
+form label {
+    font-size: 20px;
+    color: var(--neutral-300);
+    font-weight: 500;
+}
+
+/*info-area*/
+.submit-info {
+    width: 400px;
+    height: 340px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.5fr 1fr 2fr 0.5fr 1fr 2fr 0.5fr 1.8fr;
+}
+
+
+.submit-info input {
+    font-family: "Inconsolata", serif;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 8px;
+    margin-top: 5px;
+    background: transparent;
+    border: 1px solid var(--neutral-500);
+    color: var(--neutral-300);
+    padding-left: 15px;
+    height: 40px;
+}
+
+input::placeholder {
+    font-family: "Inconsolata", serif;
+    color: var(--neutral-300);
+    opacity: 0.5;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input:focus {
+    outline: 1.5px solid var(--neutral-500);
+    outline-offset: 3px;
+}
+
+input:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--orange-500);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-family: "Inconsolata", serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: 40px;
+    margin-top: 10px;
+}
+
+button:focus {
+    outline: 1.5px solid var(--neutral-300);
+    outline-offset: 3px;
+}
+
+/* image uploader*/
+#drop-area-container {
+    position: relative;
+    height: 120px;
+}
+
+.dropBox {
+    position: relative;
+    width: 400px;
+    height: 115px;
+    border: 0.13rem dashed var(--neutral-500);
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    margin-top: 10px;
+}
+
+.dropBox:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+#image-view {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--neutral-500);
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.1)
+}
+
+
+#image-view img {
+    width: 30px;
+}
+
+.drop-area-text {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--neutral-300);
+}
+
+.img-info {
+
+    font-size: 12px;
+    color: var(--neutral-500);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.img-info img {
+    margin-right: 5px;
+    width: 3.5%;
+    margin-left: 5px;
+}
+
+
+.alt-btn {
+    border-radius: 5px;
+    font-size: 11px;
+    height: 20px;
+    width: 80px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.display-none {
+    display: none;
+}
+
+.rmv-btn {
+    position: relative;
+    top: -66%;
+    left: 25%;
+    padding-top: 4px;
+    padding-left: 7px;
+
+}
+
+.chg-btn {
+    position: absolute;
+    top: 70%;
+    left: 52%;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+/*form validation*/
+
+.submit-info input.invalid {
+    border: 1.5px solid var(--orange-500);
+    color: var(--orange-500);
+}
+
+.info-msg {
+    margin-left: 5px;
+}
+
+.error-msg {
+    font-size: 12px;
+    color: var(--orange-500);
+    display: flex;
+    align-items: center;
+}
+
+.err-text {
+    margin-left: 5px;
+}
+
+/*ticket page*/
+.ticket-container {
+    width: 900px;
+    height: 600px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12%;
+}
+
+.h1-name {
+    background-image: var(--gradient-text);
+    color: transparent;
+    background-clip: text;
+}
+
+.ticket-p {
+    text-align: center;
+}
+
+.p-email {
+    color: var(--orange-500);
+}
+
+
+.ticket-img-wrapper {
+    width: 600px;
+    height: 280px;
+    background-image: url(assets/images/pattern-ticket.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-areas:
+        "a a c"
+        "b b c";
+    padding: 24px;
+}
+
+
+.ticket-title {
+    grid-area: a;
+    width: 470px;
+    height: 110px;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+
+}
+
+.ticket-heading {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: left;
+}
+
+.ticket-date {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    word-spacing: 4px;
+    color: var(--neutral-300);
+}
+
+.visitor {
+    grid-area: b;
+    width: 470px;
+    height: 110px;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 10px;
+}
+
+.visitor-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin-top: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.visitor-info {
+    margin-top: 30px;
+    width: 360px;
+    height: 80px;
+}
+
+.visitor-name {
+    font-size: 30px;
+    margin-top: 5px;
+    color: var(--neutral-300);
+    font-weight: 500;
+}
+
+.visitor-github {
+    color: var(--neutral-300);
+    font-size: 18px;
+    display: flex;
+
+}
+
+.github-icon {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.github-account {
+    margin-top: 12px;
+}
+
+.ticket-number {
+    grid-area: c;
+    width: 100px;
+    height: 224px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    color: var(--neutral-500);
+}
+
+
+/*footer*/
+.attribution {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    font-size: 14px;
+    color: var(--neutral-300);
+}
