@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+      Legacy project (2024)
+      Original styles preserved.
+      Class names lightly annotated for readability and structure clarity.
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
@@ -14,7 +19,159 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+     <main class="dashboard container">
+      <!-- Profile / controls -->
+      <section class="dashboard__profile profile">
+        <div class="profile__person person">
+          <div class="profile__avatar jeremy-wrap">
+            <img
+              class="profile__avatar-img jeremy-img"
+              src="images/image-jeremy.png"
+              alt="Jeremy Robson"
+            />
+          </div>
+          <div class="profile__info">
+            <span class="profile__label title-1">Report for</span><br />
+            <h1 class="profile__name title-2">Jeremy Robson</h1>
+          </div>
+        </div>
+
+        <div class="profile__controls time-range">
+          <div class="profile__btn btn" id="dailyBtn" onclick="updateTimeframes('daily')">
+            Daily
+          </div>
+          <div class="profile__btn btn" id="weeklyBtn" onclick="updateTimeframes('weekly')">
+            Weekly
+          </div>
+          <div class="profile__btn btn" id="monthlyBtn" onclick="updateTimeframes('monthly')">
+            Monthly
+          </div>
+        </div>
+      </section>
+
+      <!-- Activity cards -->
+      <section class="dashboard__grid">
+        <!-- Work -->
+        <article class="activity-card grid-item work img-size">
+          <div class="activity-card__display display">
+            <div class="activity-card__content task-wrapper">
+              <div class="activity-card__title task">
+                Work
+                <img
+                  class="ellipsis"
+                  src="images/icon-ellipsis.svg"
+                  alt="More options"
+                />
+              </div>
+              <div class="activity-card__current task-current">
+                <span class="work-cur"></span>hrs
+              </div>
+              <div class="activity-card__previous task-last">
+                <span class="last"></span> -
+                <span class="work-pre"></span> hrs
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Play -->
+        <article class="activity-card grid-item play img-size">
+          <div class="activity-card__display display">
+            <div class="activity-card__content task-wrapper">
+              <div class="activity-card__title task">
+                Play
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="More options" />
+              </div>
+              <div class="activity-card__current task-current">
+                <span class="play-cur"></span>hrs
+              </div>
+              <div class="activity-card__previous task-last">
+                <span class="last"></span> -
+                <span class="play-pre"></span> hrs
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Study -->
+        <article class="activity-card grid-item study img-size">
+          <div class="activity-card__display display">
+            <div class="activity-card__content task-wrapper">
+              <div class="activity-card__title task">
+                Study
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="More options" />
+              </div>
+              <div class="activity-card__current task-current">
+                <span class="study-cur"></span>hrs
+              </div>
+              <div class="activity-card__previous task-last">
+                <span class="last"></span> -
+                <span class="study-pre"></span> hrs
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Exercise -->
+        <article class="activity-card grid-item exercise img-size">
+          <div class="activity-card__display display">
+            <div class="activity-card__content task-wrapper">
+              <div class="activity-card__title task">
+                Exercise
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="More options" />
+              </div>
+              <div class="activity-card__current task-current">
+                <span class="exercise-cur"></span>hrs
+              </div>
+              <div class="activity-card__previous task-last">
+                <span class="last"></span> -
+                <span class="exercise-pre"></span> hrs
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Social -->
+        <article class="activity-card grid-item social img-size">
+          <div class="activity-card__display display">
+            <div class="activity-card__content task-wrapper">
+              <div class="activity-card__title task">
+                Social
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="More options" />
+              </div>
+              <div class="activity-card__current task-current">
+                <span class="social-cur"></span>hrs
+              </div>
+              <div class="activity-card__previous task-last">
+                <span class="last"></span> -
+                <span class="social-pre"></span> hrs
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Self Care -->
+        <article class="activity-card grid-item self-care img-size">
+          <div class="activity-card__display display">
+            <div class="activity-card__content task-wrapper">
+              <div class="activity-card__title task">
+                Self Care
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="More options" />
+              </div>
+              <div class="activity-card__current task-current">
+                <span class="self-care-cur"></span>hrs
+              </div>
+              <div class="activity-card__previous task-last">
+                <span class="last"></span> -
+                <span class="self-care-pre"></span> hrs
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- <div class="container">
       <div class="profile">
         <div class="person">
           <div class="jeremy-wrap"><img class="jeremy-img" src="images/image-jeremy.png" alt="jeremy-photo"></div>
@@ -145,13 +302,13 @@
         </div>
         </div>
       </div>
-    </div>
-    <div class="attribution">
+    </div> -->
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Yi-Ying Ko</a>.
-    </div>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
