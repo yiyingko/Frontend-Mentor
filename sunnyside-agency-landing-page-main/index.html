@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+      Legacy project (2024)
+      Original styles preserved.
+      Class names lightly annotated for readability and structure clarity.
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
@@ -15,182 +20,224 @@
     <title>Frontend Mentor | Sunnyside agency landing page</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header>
-      <div class="navigation">
-        <div class="icon"><img src="images/logo.svg" alt="agency-logo" /></div>
-        <nav class="nav-wrap">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="" class="nav-link">About</a>
+   <body>
+    <header class="site-header">
+      <div class="site-header__nav navigation">
+        <div class="site-header__logo icon">
+          <img src="images/logo.svg" alt="agency-logo" />
+        </div>
+
+        <nav class="site-header__menu nav-wrap">
+          <ul class="site-header__list nav-list">
+            <li class="site-header__item nav-item">
+              <a href="" class="site-header__link nav-link">About</a>
             </li>
-            <li class="nav-item">
-              <a href="" class="nav-link">Services</a>
+            <li class="site-header__item nav-item">
+              <a href="" class="site-header__link nav-link">Services</a>
             </li>
-            <li class="nav-item">
-              <a href="" class="nav-link">Projects</a>
+            <li class="site-header__item nav-item">
+              <a href="" class="site-header__link nav-link">Projects</a>
             </li>
-            <li class="nav-item nav-contact">
-              <a href="" class="nav-link nav-a-contact">Contact</a>
+            <li class="site-header__item nav-item nav-contact">
+              <a href="" class="site-header__link nav-link nav-a-contact">
+                Contact
+              </a>
             </li>
           </ul>
         </nav>
       </div>
-      <div class="hero-text"><h1>We are creatives</h1></div>
-      <div class="arrow">
-        <img class="arrow-img" src="images/icon-arrow-down.svg" alt="arrow" />
+
+      <div class="site-header__hero hero-text">
+        <h1>We are creatives</h1>
+      </div>
+
+      <div class="site-header__arrow arrow">
+        <img
+          class="site-header__arrow-img arrow-img"
+          src="images/icon-arrow-down.svg"
+          alt="arrow"
+        />
       </div>
     </header>
-    <main>
-      <section class="content-wrapper">
-        <div class="content-text">
-          <div class="content-text-inner">
+    <main class="site-main">
+      <!-- Content blocks -->
+      <section class="content content-wrapper">
+        <div class="content__text content-text">
+          <div class="content__inner content-text-inner">
             <h3>Transform your brand</h3>
             <p>
               We are a full-service creative agency specializing in helping
               brands grow fast. Engage your clients through compelling visuals
               that do most of the marketing for you.
             </p>
-            <a href="" class="nav-link-content">Learn more</a>
-            <div class="line"></div>
+            <a href="" class="content__link nav-link-content">Learn more</a>
+            <div class="content__line line"></div>
           </div>
         </div>
-        <picture
-          ><img
-            class="contant-img"
+
+        <picture>
+          <img
+            class="content__image contant-img"
             src="images/desktop/image-transform.jpg"
             alt="egg"
-        /></picture>
+          />
+        </picture>
 
-        <picture
-          ><img
-            class="contant-img"
+        <picture>
+          <img
+            class="content__image contant-img"
             src="images/desktop/image-stand-out.jpg"
             alt="glasses"
-        /></picture>
-        <div class="content-text">
-          <div class="content-text-inner">
+          />
+        </picture>
+
+        <div class="content__text content-text">
+          <div class="content__inner content-text-inner">
             <h3>Stand out to the right audience</h3>
             <p>
               Using a collaborative formula of designers, researchers,
               photographers, videographers, and copywriters, we’ll build and
               extend your brand in digital places.
             </p>
-            <a href="" class="nav-link-content">Learn more</a>
-            <div class="line-2"></div>
+            <a href="" class="content__link nav-link-content">Learn more</a>
+            <div class="content__line line-2"></div>
           </div>
         </div>
-        <div class="service-type service-type-1">
-          <div class="service-inner">
-            <h3 class="inner-1">Graphic design</h3>
-            <p class="inner-1">
+
+        <div class="service service-type service-type-1">
+          <div class="service__inner service-inner">
+            <h3 class="service__title inner-1">Graphic design</h3>
+            <p class="service__text inner-1">
               Great design makes you memorable. We deliver artwork that
               underscores your brand message and captures potential clients’
               attention.
             </p>
           </div>
         </div>
-        <div class="service-type service-type-2">
-          <div class="service-inner">
-            <h3 class="inner-2">Photography</h3>
-            <p class="inner-2">
+
+        <div class="service service-type service-type-2">
+          <div class="service__inner service-inner">
+            <h3 class="service__title inner-2">Photography</h3>
+            <p class="service__text inner-2">
               Increase your credibility by getting the most stunning,
               high-quality photos that improve your business image.
             </p>
           </div>
         </div>
       </section>
-      <section class="testimonials">
+
+      <!-- Testimonials -->
+      <section class="testimonials testimonials-section">
         <h2>Client testimonials</h2>
-        <div class="client-wraper">
-          <div class="card">
-            <picture class="person"
-              ><img class="person-img" src="images/image-emily.jpg" alt="emily"
-            /></picture>
-            <div class="clent-text">
+
+        <div class="testimonials__list client-wraper">
+          <div class="testimonial-card card">
+            <picture class="testimonial-card__avatar person">
+              <img
+                class="testimonial-card__img person-img"
+                src="images/image-emily.jpg"
+                alt="Emily"
+              />
+            </picture>
+
+            <div class="testimonial-card__content clent-text">
               <p>
                 We put our trust in Sunnyside and they delivered, making sure
                 our needs were met and deadlines were always hit.
               </p>
-              <div class="name-wrapper">
-                <span class="name">Emily R.</span><br />Marketing Director
+              <div class="testimonial-card__author name-wrapper">
+                <span class="name">Emily R.</span><br />
+                Marketing Director
               </div>
             </div>
           </div>
-          <div class="card">
-            <picture class="person"
-              ><img
-                class="person-img"
+
+          <div class="testimonial-card card">
+            <picture class="testimonial-card__avatar person">
+              <img
+                class="testimonial-card__img person-img"
                 src="images/image-thomas.jpg"
-                alt="thomas"
-            /></picture>
-            <div class="clent-text">
+                alt="Thomas"
+              />
+            </picture>
+
+            <div class="testimonial-card__content clent-text">
               <p>
                 Sunnyside’s enthusiasm coupled with their keen interest in our
                 brand’s success made it a satisfying and enjoyable experience.
               </p>
-              <div class="name-wrapper">
-                <span class="name">Thomas S.</span> <br />Chief Operating
-                Officer
+              <div class="testimonial-card__author name-wrapper">
+                <span class="name">Thomas S.</span><br />
+                Chief Operating Officer
               </div>
             </div>
           </div>
-          <div class="card">
-            <picture class="person"
-              ><img
-                class="person-img"
+
+          <div class="testimonial-card card">
+            <picture class="testimonial-card__avatar person">
+              <img
+                class="testimonial-card__img person-img"
                 src="images/image-jennie.jpg"
-                alt="jennie"
-            /></picture>
-            <div class="clent-text">
+                alt="Jennie"
+              />
+            </picture>
+
+            <div class="testimonial-card__content clent-text">
               <p>
                 Incredible end result! Our sales increased over 400% when we
                 worked with Sunnyside. Highly recommended!
               </p>
-              <div class="name-wrapper">
-                <span class="name">Jennie F.</span><br />Business Owner
+              <div class="testimonial-card__author name-wrapper">
+                <span class="name">Jennie F.</span><br />
+                Business Owner
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="pictures">
-        <picture
-          ><img
-            class="picture-img"
+
+      <!-- Gallery -->
+      <section class="gallery pictures">
+        <picture>
+          <img
+            class="gallery__img picture-img"
             src="images/desktop/image-gallery-milkbottles.jpg"
             alt="milkbottles"
-        /></picture>
-        <picture
-          ><img
-            class="picture-img"
+          />
+        </picture>
+        <picture>
+          <img
+            class="gallery__img picture-img"
             src="images/desktop/image-gallery-orange.jpg"
             alt="orange"
-        /></picture>
-        <picture
-          ><img
-            class="picture-img"
+          />
+        </picture>
+        <picture>
+          <img
+            class="gallery__img picture-img"
             src="images/desktop/image-gallery-cone.jpg"
             alt="cone"
-        /></picture>
-        <picture
-          ><img
-            class="picture-img"
+          />
+        </picture>
+        <picture>
+          <img
+            class="gallery__img picture-img"
             src="images/desktop/image-gallery-sugarcubes.jpg"
             alt="sugarcubes"
-        /></picture>
+          />
+        </picture>
       </section>
     </main>
-    <footer>
-      <div class="icon">
+    <footer class="site-footer">
+      <div class="site-footer__logo icon">
         <img class="icon-img" src="images/logo-footer.svg" alt="agency-logo" />
       </div>
-      <ul class="footer-list">
+      <ul class="site-footer__nav footer-list">
         <li class="footer-item"><a class="footer-nav" href="">About</a></li>
         <li class="footer-item"><a class="footer-nav" href="">Services</a></li>
         <li class="footer-item"><a class="footer-nav" href="">Projects</a></li>
       </ul>
-      <ul class="social-list">
+      <ul class="site-footer__social social-list">
         <li class="social-item">
           <a href="#">
             <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
