@@ -67,8 +67,8 @@ body {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    background-color: var(--dark-blue);
     margin-top: 10px;
+    background-color: var(--dark-blue);
 }
 
 .jeremy-wrap {
