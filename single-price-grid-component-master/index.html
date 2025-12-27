@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+      Legacy project (2024)
+      Original styles preserved.
+      Class names lightly annotated for readability and structure clarity.
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
@@ -17,7 +22,52 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="price wrapper">
+      <section class="price__intro long-text">
+        <h1 class="price__title long-title">Join our community</h1>
+        <h2 class="price__subtitle long-title-2">
+          30-day, hassle-free money back guarantee
+        </h2>
+        <p class="price__description long-p">
+          Gain access to our full library of tutorials along with expert code
+          reviews. <br />
+          Perfect for any developers who are serious about honing their skills.
+        </p>
+      </section>
+
+      <section class="price__grid short-text">
+        <div class="price__plan text-1">
+          <div class="price__plan-content">
+            <h2 class="price__plan-title text-p">Monthly Subscription</h2>
+
+            <p class="price__plan-price text-1-p">
+              <span class="price__amount big-price">&dollar;29</span>
+              <span class="price__period per-month">per month</span>
+            </p>
+
+            <p class="price__plan-note text-1-p2">
+              Full access for less than &dollar;1 a day
+            </p>
+          </div>
+
+          <div class="price__cta btn">Sign Up</div>
+        </div>
+
+        <div class="price__benefits text-2">
+          <p class="price__benefits-title text-p">Why Us</p>
+          <ul class="price__benefits-list">
+            <li>Tutorials by industry experts</li>
+            <li>Peer &amp; expert code review</li>
+            <li>Coding exercises</li>
+            <li>Access to our GitHub repos</li>
+            <li>Community forum</li>
+            <li>Flashcard decks</li>
+            <li>New videos every week</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- <div class="wrapper">
       <div class="long-text">
         <h1 class="long-title">Join our community</h1>
         <h2 class="long-title-2">30-day, hassle-free money back guarantee</h2>
@@ -52,7 +102,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <footer>
       <p class="attribution">
