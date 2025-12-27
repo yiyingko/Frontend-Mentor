@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+        <!--
+      Legacy project (2023)
+      Original styles preserved.
+      Class names lightly annotated for readability and structure clarity.
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
@@ -20,34 +25,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div role="img" class="logo">
-          <img src="images/logo.svg" alt="huddle-logo" />
+    <div class="huddle container">
+      <header class="huddle__header">
+        <div role="img" class="huddle__logo logo">
+          <img src="images/logo.svg" alt="Huddle logo" />
         </div>
       </header>
-      <main>
-        <div role="img" class="hero-1">
+      <main class="huddle__main">
+        <div role="img" class="huddle__illustration hero-1">
           <img
-            class="hero-img"
+            class="huddle__illustration-img hero-img"
             src="images/illustration-mockups.svg"
-            alt="image-computer"
+            alt="Mockup illustration"
           />
         </div>
-        <div class="hero-2">
-          <h1>Build The Community Your Fans Will Love</h1>
-          <p>
+
+        <div class="huddle__content hero-2">
+          <h1 class="huddle__title">
+            Build The Community Your Fans Will Love
+          </h1>
+          <p class="huddle__description">
             Huddle re-imagines the way we build communities. You have a voice,
             but so does your audience. Create connections with your users as you
             engage in genuine discussion.
           </p>
-          <button>Register</button>
+          <button class="huddle__cta">Register</button>
         </div>
       </main>
-      <section class="social">
-        <ul class="social-logo">
-          <li class="social-links">
-            <a href="https://www.facebook.com" title="huddle on Facebook">
+<section class="huddle__social social">
+        <ul class="huddle__social-list social-logo">
+          <li class="huddle__social-item social-links">
+            <a href="https://www.facebook.com" title="Huddle on Facebook">
               <?xml version="1.0" ?><svg
                 class="icon"
                 height="24px"
@@ -87,8 +95,8 @@
               <span class="icon__fallback-text">Facebook</span>
             </a>
           </li>
-          <li class="social-links">
-            <a href="https://www.twitter.com" title="huddle on twitter">
+          <li class="huddle__social-item social-links">
+            <a href="https://www.twitter.com" title="Huddle on Twitter">
               <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
               <svg
                 class="icon"
@@ -120,8 +128,8 @@
             </a>
             <span class="icon__fallback-text">Twitter</span>
           </li>
-          <li class="social-links">
-            <a href="https://www.instagram.com" title="huddle on instagram">
+          <li class="huddle__social-item social-links">
+            <a href="https://www.instagram.com" title="Huddle on Instagram
               <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
               <svg
                 class="icon"
@@ -157,7 +165,7 @@
                 <g id="Layer_1" />
               </svg>
             </a>
-            <span class="icon__fallback-text">instagram</span>
+            <span class="icon__fallback-text">Instagram</span>
           </li>
         </ul>
       </section>
