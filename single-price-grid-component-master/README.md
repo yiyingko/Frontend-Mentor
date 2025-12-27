@@ -47,8 +47,8 @@ This repository represents a **snapshot of progress**, not a modern refactor.
 ---
 
 ## Challenge Link
-
-https://www.frontendmentor.io/challenges/single-price-grid-component-5ce4116a
+[
+https://www.frontendmentor.io/challenges/single-price-grid-component-5ce4116a](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc)
 
 ---
 
