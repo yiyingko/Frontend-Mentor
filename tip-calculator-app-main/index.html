@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+      Legacy project (2024)
+      Original styles preserved.
+      Class names lightly annotated for readability and structure clarity.
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
@@ -19,70 +24,88 @@
   </head>
   <body>
     <div class="container">
-      <div class="main">
-        <h1>spli<br />tter</h1>
-        <div class="calculator">
-          <div class="left">
-            <div class="left-1">
-              <div class="title">
+        <div class="tip-app container">
+      <div class="tip-app__main main">
+        <h1 class="tip-app__brand">
+          spli<br />tter
+        </h1>
+
+        <div class="tip-calculator calculator">
+          <!-- Inputs -->
+          <div class="tip-calculator__inputs left">
+            <!-- Bill -->
+            <div class="tip-calculator__field left-1">
+              <div class="tip-calculator__label-row title">
                 <label>Bill</label><span id="billMsg" class="msg"></span>
               </div>
               <input
-                class="input-bill input-long"
+                class="tip-calculator__input input-bill input-long"
                 id="bill"
                 type="number"
                 name="number"
               />
             </div>
-            <div class="left-2">
-              <div class="title">
+
+            <!-- Tip selection -->
+            <div class="tip-calculator__field left-2">
+              <div class="tip-calculator__label-row title">
                 <label>Select Tip %</label>
                 <span id="customMsg" class="msg"></span>
               </div>
-              <div class="tips-options">
-                <button class="tip" value="5">5%</button>
-                <button class="tip" value="10">10%</button>
-                <button class="tip" value="15">15%</button>
-                <button class="tip" value="25">25%</button>
-                <button class="tip" value="50">50%</button>
+
+              <div class="tip-calculator__tips tips-options">
+                <button class="tip-calculator__tip tip" value="5">5%</button>
+                <button class="tip-calculator__tip tip" value="10">10%</button>
+                <button class="tip-calculator__tip tip" value="15">15%</button>
+                <button class="tip-calculator__tip tip" value="25">25%</button>
+                <button class="tip-calculator__tip tip" value="50">50%</button>
+
                 <input
                   type="number"
                   name="number"
                   id="custom"
-                  class="tip custom-input"
+                  class="tip-calculator__tip tip custom-input"
                   placeholder="Custom"
                 />
               </div>
             </div>
-            <div class="left-3">
-              <div class="title">
+
+            <!-- People -->
+            <div class="tip-calculator__field left-3">
+              <div class="tip-calculator__label-row title">
                 <label>Number of People</label>
                 <span id="peopleMsg" class="msg"></span>
               </div>
               <input
                 id="people"
-                class="input-long num-people"
+                class="tip-calculator__input input-long num-people"
                 type="number"
                 name="person"
               />
             </div>
           </div>
-          <div class="right">
-            <div class="display">
-              <div class="display-space">
-                <div class="display-title">
+
+          <!-- Results -->
+          <div class="tip-calculator__results right">
+            <div class="tip-results display">
+              <div class="tip-results__row display-space">
+                <div class="tip-results__label display-title">
                   Tip Amount<br /><span class="display-title-2">/ person</span>
                 </div>
-                <div id="tip_person" class="amount"></div>
+                <div id="tip_person" class="tip-results__value amount"></div>
               </div>
-              <div class="display-space">
-                <div class="display-title">
+
+              <div class="tip-results__row display-space">
+                <div class="tip-results__label display-title">
                   Total<br /><span class="display-title-2">/ person</span>
                 </div>
-                <div id="total_person" class="amount"></div>
+                <div id="total_person" class="tip-results__value amount"></div>
               </div>
             </div>
-            <button class="display reset-btn" onclick="reset()">Reset</button>
+
+            <button class="tip-results__reset display reset-btn" onclick="reset()">
+              Reset
+            </button>
           </div>
         </div>
       </div>
