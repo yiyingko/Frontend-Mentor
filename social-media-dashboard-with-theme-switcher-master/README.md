@@ -58,7 +58,7 @@ at the time.
 
 ## Challenge Link
 
-https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY2C7x4
+[https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY2C7x4](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H)
 
 ---
 
