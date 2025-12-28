@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+     <!--
+      Legacy project (2024)
+      Original styles preserved.
+      Class names lightly annotated for readability and structure clarity.
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
@@ -18,260 +23,307 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="section section-1">
-        <div class="mid-section mid-sec-h1">
-          <div class="h1-wrap">
-            <h1>Social Media Dashboard</h1>
-            <p>Total Followers: 23,004</p>
+   <div class="dashboard container">
+          <div class="dashboard__section section section-1">
+            <div class="dashboard__header mid-section mid-sec-h1">
+              <div class="dashboard__title-wrap h1-wrap">
+                <h1 class="dashboard__title">Social Media Dashboard</h1>
+                <p class="dashboard__subtitle">Total Followers: 23,004</p>
+              </div>
+
+              <div class="dashboard__toggle toggle">
+                <span class="dashboard__mode mode-switch">Dark Mode</span>
+                <label class="dashboard__switch switch">
+                  <input
+                    class="dashboard__switch-input toggleSwitch"
+                    type="checkbox"
+                    id="theme-toggle"
+                    checked="true"
+                    onclick="toggleSwitch()"
+                  />
+                  <span class="dashboard__switch-slider slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="dashboard__summary mid-section social-total">
+              <!-- Facebook -->
+              <div class="social-card followers">
+                <div class="social-card__top top-fb"></div>
+
+                <div class="social-card__row followers-inner">
+                  <div class="social-card__account followers-account">
+                    <img
+                      class="social-card__icon followers-icon"
+                      src="images/icon-facebook.svg"
+                      alt="facebook-icon"
+                    /><span class="social-card__handle followers-name"
+                      >@nathanf</span
+                    >
+                  </div>
+                </div>
+
+                <div class="social-card__row followers-inner">
+                  <span class="social-card__count followers-count">1987</span
+                  ><br /><span class="social-card__label followers-unit"
+                    >Followers</span
+                  >
+                </div>
+
+                <div class="social-card__row followers-inner">
+                  <div class="social-card__trend today-up">
+                    <img
+                      class="social-card__trend-icon icon-arrow"
+                      src="images/icon-up.svg"
+                      alt="arrow-up"
+                    /><span>12 Today</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Twitter -->
+              <div class="social-card followers">
+                <div class="social-card__top top-twitter"></div>
+
+                <div class="social-card__row followers-inner">
+                  <div class="social-card__account followers-account">
+                    <img
+                      class="social-card__icon followers-icon"
+                      src="images/icon-twitter.svg"
+                      alt="twitter-icon"
+                    />
+                    <span class="social-card__handle followers-name"
+                      >@nathanf</span
+                    >
+                  </div>
+                </div>
+
+                <div class="social-card__row followers-inner">
+                  <span class="social-card__count followers-count">1044</span
+                  ><br /><span class="social-card__label followers-unit"
+                    >Followers</span
+                  >
+                </div>
+
+                <div class="social-card__row followers-inner">
+                  <div class="social-card__trend today-up">
+                    <img
+                      class="social-card__trend-icon icon-arrow"
+                      src="images/icon-up.svg"
+                      alt="arrow-up"
+                    /><span>99 Today</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Instagram -->
+              <div class="social-card followers">
+                <div class="social-card__top top-insta"></div>
+
+                <div class="social-card__row followers-inner">
+                  <div class="social-card__account followers-account">
+                    <img
+                      class="social-card__icon followers-icon"
+                      src="images/icon-instagram.svg"
+                      alt="instagram-icon"
+                    />
+                    <span class="social-card__handle followers-name"
+                      >@realnathanf</span
+                    >
+                  </div>
+                </div>
+
+                <div class="social-card__row followers-inner">
+                  <span class="social-card__count followers-count">11k</span
+                  ><br /><span class="social-card__label followers-unit"
+                    >Followers</span
+                  >
+                </div>
+
+                <div class="social-card__row followers-inner">
+                  <div class="social-card__trend today-up">
+                    <img
+                      class="social-card__trend-icon icon-arrow"
+                      src="images/icon-up.svg"
+                      alt="arrow-up"
+                    /><span>1099 Today</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- YouTube -->
+              <div class="social-card followers">
+                <div class="social-card__top top-youtube"></div>
+
+                <div class="social-card__row followers-inner">
+                  <div class="social-card__account followers-account">
+                    <img
+                      class="social-card__icon followers-icon"
+                      src="images/icon-youtube.svg"
+                      alt="youtube-icon"
+                    />
+                    <span class="social-card__handle followers-name"
+                      >@Nathan F.</span
+                    >
+                  </div>
+                </div>
+
+                <div class="social-card__row followers-inner">
+                  <span class="social-card__count followers-count">8239</span
+                  ><br /><span class="social-card__label followers-unit"
+                    >Subscribers</span
+                  >
+                </div>
+
+                <div class="social-card__row followers-inner">
+                  <div class="social-card__trend today-down">
+                    <img
+                      class="social-card__trend-icon icon-arrow"
+                      src="images/icon-down.svg"
+                      alt="arrow-down"
+                    /><span>144 Today</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="toggle">
-            <span class="mode-switch">Dark Mode</span>
-            <label class="switch">
-              <input
-                class="toggleSwitch"
-                type="checkbox"
-                id="theme-toggle"
-                checked="true"
-                onclick="toggleSwitch()"
-              />
-              <span class="slider"></span>
-            </label>
+
+          <div class="dashboard__section section section-2">
+            <div class="dashboard__overview-title mid-section mid-section-h2">
+              <h2>Overview - Today</h2>
+            </div>
+
+            <div class="dashboard__overview-grid mid-section social-today">
+              <!-- 1 -->
+              <div class="metric-card views">
+                <div class="metric-card__header views-inner inner-1">
+                  <span>Page Views</span>
+                  <img src="images/icon-facebook.svg" alt="facebook-icon" />
+                </div>
+                <div class="metric-card__body views-inner inner-2">
+                  <span class="metric-card__value views-number">87</span>
+                  <div class="metric-card__trend views-up">
+                    <img src="images/icon-up.svg" alt="arrow-up" /><span
+                      >3%</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2 -->
+              <div class="metric-card views">
+                <div class="metric-card__header views-inner inner-1">
+                  <span>Likes</span>
+                  <img src="images/icon-facebook.svg" alt="facebook-icon" />
+                </div>
+                <div class="metric-card__body views-inner inner-2">
+                  <span class="metric-card__value views-number">52</span>
+                  <div class="metric-card__trend views-down">
+                    <img src="images/icon-down.svg" alt="arrow-down" /><span
+                      >2%</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3 -->
+              <div class="metric-card views">
+                <div class="metric-card__header views-inner inner-1">
+                  <span>Likes</span>
+                  <img src="images/icon-instagram.svg" alt="instagram-icon" />
+                </div>
+                <div class="metric-card__body views-inner inner-2">
+                  <span class="metric-card__value views-number">5462</span>
+                  <div class="metric-card__trend views-up">
+                    <img src="images/icon-up.svg" alt="arrow-up" /><span
+                      >2257%</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4 -->
+              <div class="metric-card views">
+                <div class="metric-card__header views-inner inner-1">
+                  <span>Profile Views</span>
+                  <img src="images/icon-instagram.svg" alt="instagram-icon" />
+                </div>
+                <div class="metric-card__body views-inner inner-2">
+                  <span class="metric-card__value views-number">52k</span>
+                  <div class="metric-card__trend views-up">
+                    <img src="images/icon-up.svg" alt="arrow-up" /><span
+                      >1375%</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5 -->
+              <div class="metric-card views">
+                <div class="metric-card__header views-inner inner-1">
+                  <span>Retweets</span>
+                  <img src="images/icon-twitter.svg" alt="twitter-icon" />
+                </div>
+                <div class="metric-card__body views-inner inner-2">
+                  <span class="metric-card__value views-number">117</span>
+                  <div class="metric-card__trend views-up">
+                    <img src="images/icon-up.svg" alt="arrow-up" /><span
+                      >303%</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6 -->
+              <div class="metric-card views">
+                <div class="metric-card__header views-inner inner-1">
+                  <span>Likes</span>
+                  <img src="images/icon-twitter.svg" alt="twitter-icon" />
+                </div>
+                <div class="metric-card__body views-inner inner-2">
+                  <span class="metric-card__value views-number">507</span>
+                  <div class="metric-card__trend views-up">
+                    <img src="images/icon-up.svg" alt="arrow-up" /><span
+                      >553%</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7 -->
+              <div class="metric-card views">
+                <div class="metric-card__header views-inner inner-1">
+                  <span>Likes</span>
+                  <img src="images/icon-youtube.svg" alt="youtube-icon" />
+                </div>
+                <div class="metric-card__body views-inner inner-2">
+                  <span class="metric-card__value views-number">107</span>
+                  <div class="metric-card__trend views-down">
+                    <img src="images/icon-down.svg" alt="arrow-" /><span
+                      >19%</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- 8 -->
+              <div class="metric-card views">
+                <div class="metric-card__header views-inner inner-1">
+                  <span>Total Views</span>
+                  <img src="images/icon-youtube.svg" alt="youtube-icon" />
+                </div>
+                <div class="metric-card__body views-inner inner-2">
+                  <span class="metric-card__value views-number">1407</span>
+                  <div class="metric-card__trend views-down">
+                    <img src="images/icon-down.svg" alt="arrow" /><span
+                      >12%</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="mid-section social-total">
-          <div class="followers">
-            <div class="top-fb"></div>
-            <div class="followers-inner">
-              <div class="followers-account">
-                <img
-                  class="followers-icon"
-                  src="images/icon-facebook.svg"
-                  alt="facebook-icon"
-                /><span class="followers-name">@nathanf</span>
-              </div>
-            </div>
-            <div class="followers-inner">
-              <span class="followers-count">1987</span><br /><span
-                class="followers-unit"
-                >Followers</span
-              >
-            </div>
-            <div class="followers-inner">
-              <div class="today-up">
-                <img
-                  class="icon-arrow"
-                  src="images/icon-up.svg"
-                  alt="arrow-up"
-                /><span>12 Today</span>
-              </div>
-            </div>
-          </div>
-          <div class="followers">
-            <div class="top-twitter"></div>
-            <div class="followers-inner">
-              <div class="followers-account">
-                <img
-                  class="followers-icon"
-                  src="images/icon-twitter.svg"
-                  alt="twitter-icon"
-                />
-                <span class="followers-name">@nathanf</span>
-              </div>
-            </div>
-            <div class="followers-inner">
-              <span class="followers-count">1044</span><br /><span
-                class="followers-unit"
-                >Followers</span
-              >
-            </div>
-            <div class="followers-inner">
-              <div class="today-up">
-                <img
-                  class="icon-arrow"
-                  src="images/icon-up.svg"
-                  alt="arrow-up"
-                /><span>99 Today</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="followers">
-            <div class="top-insta"></div>
-
-            <div class="followers-inner">
-              <div class="followers-account">
-                <img
-                  class="followers-icon"
-                  src="images/icon-instagram.svg"
-                  alt="instagram-icon"
-                />
-                <span class="followers-name">@realnathanf</span>
-              </div>
-            </div>
-
-            <div class="followers-inner">
-              <span class="followers-count">11k</span><br /><span
-                class="followers-unit"
-                >Followers</span
-              >
-            </div>
-
-            <div class="followers-inner">
-              <div class="today-up">
-                <img
-                  class="icon-arrow"
-                  src="images/icon-up.svg"
-                  alt="arrow-up"
-                /><span>1099 Today</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="followers">
-            <div class="top-youtube"></div>
-
-            <div class="followers-inner">
-              <div class="followers-account">
-                <img
-                  class="followers-icon"
-                  src="images/icon-youtube.svg"
-                  alt="youtube-icon"
-                />
-                <span class="followers-name">@Nathan F.</span>
-              </div>
-            </div>
-
-            <div class="followers-inner">
-              <span class="followers-count">8239</span><br /><span
-                class="followers-unit"
-                >Subscribers</span
-              >
-            </div>
-
-            <div class="followers-inner">
-              <div class="today-down">
-                <img
-                  class="icon-arrow"
-                  src="images/icon-down.svg"
-                  alt="arrow-down"
-                /><span>144 Today</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section section-2">
-        <div class="mid-section mid-section-h2">
-          <h2>Overview - Today</h2>
-        </div>
-        <div class="mid-section social-today">
-          <div class="views">
-            <div class="views-inner inner-1">
-              <span>Page Views</span>
-              <img src="images/icon-facebook.svg" alt="facebook-icon" />
-            </div>
-            <div class="views-inner inner-2">
-              <span class="views-number">87</span>
-              <div class="views-up">
-                <img src="images/icon-up.svg" alt="arrow-up" /><span>3%</span>
-              </div>
-            </div>
-          </div>
-          <div class="views">
-            <div class="views-inner inner-1">
-              <span>Likes</span>
-              <img src="images/icon-facebook.svg" alt="facebook-icon" />
-            </div>
-            <div class="views-inner inner-2">
-              <span class="views-number">52</span>
-              <div class="views-down">
-                <img src="images/icon-down.svg" alt="arrow-down" /><span
-                  >2%</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="views">
-            <div class="views-inner inner-1">
-              <span>Likes</span>
-              <img src="images/icon-instagram.svg" alt="instagram-icon" />
-            </div>
-            <div class="views-inner inner-2">
-              <span class="views-number">5462</span>
-              <div class="views-up">
-                <img src="images/icon-up.svg" alt="arrow-up" /><span
-                  >2257%</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="views">
-            <div class="views-inner inner-1">
-              <span>Profile Views</span>
-              <img src="images/icon-instagram.svg" alt="instagram-icon" />
-            </div>
-            <div class="views-inner inner-2">
-              <span class="views-number">52k</span>
-              <div class="views-up">
-                <img src="images/icon-up.svg" alt="arrow-up" /><span
-                  >1375%</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="views">
-            <div class="views-inner inner-1">
-              <span>Retweets</span>
-              <img src="images/icon-twitter.svg" alt="twitter-icon" />
-            </div>
-            <div class="views-inner inner-2">
-              <span class="views-number">117</span>
-              <div class="views-up">
-                <img src="images/icon-up.svg" alt="arrow-up" /><span>303%</span>
-              </div>
-            </div>
-          </div>
-          <div class="views">
-            <div class="views-inner inner-1">
-              <span>Likes</span>
-              <img src="images/icon-twitter.svg" alt="twitter-icon" />
-            </div>
-            <div class="views-inner inner-2">
-              <span class="views-number">507</span>
-              <div class="views-up">
-                <img src="images/icon-up.svg" alt="arrow-up" /><span>553%</span>
-              </div>
-            </div>
-          </div>
-          <div class="views">
-            <div class="views-inner inner-1">
-              <span>Likes</span>
-              <img src="images/icon-youtube.svg" alt="youtube-icon" />
-            </div>
-            <div class="views-inner inner-2">
-              <span class="views-number">107</span>
-              <div class="views-down">
-                <img src="images/icon-down.svg" alt="arrow-" /><span>19%</span>
-              </div>
-            </div>
-          </div>
-          <div class="views">
-            <div class="views-inner inner-1">
-              <span>Total Views</span>
-              <img src="images/icon-youtube.svg" alt="youtube-icon" />
-            </div>
-            <div class="views-inner inner-2">
-              <span class="views-number">1407</span>
-              <div class="views-down">
-                <img src="images/icon-down.svg" alt="arrow" /><span>12%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="attribution">
       Challenge by
