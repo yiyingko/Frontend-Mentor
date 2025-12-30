@@ -119,13 +119,10 @@ h1 {
 
 /*btn for different chart*/
 .chart_types {
-    width: 120px;
+    width: 450px;
     height: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     margin-top: 20px;
-    position: relative;
-    right: -150%;
+    text-align: end;
 }
 
 button {
