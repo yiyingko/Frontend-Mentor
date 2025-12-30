@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+      Legacy project (2024)
+      Original styles preserved.
+      Class names lightly annotated for readability and structure clarity.
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -13,59 +18,77 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section class="container">
-      <div class="form-container">
-        <form class="form">
-          <div class="form-section">
-            <div id="title-day" class="title test">Day</div>
-            <input type="text" name="day" id="day" placeholder="DD" required />
-            <div class="Msg" id="dayMsg"></div>
-          </div>
-          <div class="form-section">
-            <div id="title-month" class="title test">Month</div>
+    <section class="age-app container">
+      <!-- Form -->
+      <div class="age-app__form form-container">
+        <form class="age-form form">
+          <div class="age-form__fields form-section">
+            <div id="title-day" class="age-form__label title test">Day</div>
             <input
+              class="age-form__input"
+              type="text"
+              name="day"
+              id="day"
+              placeholder="DD"
+              required
+            />
+            <div class="age-form__msg Msg" id="dayMsg"></div>
+          </div>
+
+          <div class="age-form__fields form-section">
+            <div id="title-month" class="age-form__label title test">Month</div>
+            <input
+              class="age-form__input"
               type="text"
               name="month"
               id="month"
               placeholder="MM"
               required
             />
-            <div class="Msg" id="monthMsg"></div>
+            <div class="age-form__msg Msg" id="monthMsg"></div>
           </div>
-          <div class="form-section">
-            <div id="title-year" class="title test">Year</div>
+
+          <div class="age-form__fields form-section">
+            <div id="title-year" class="age-form__label title test">Year</div>
             <input
+              class="age-form__input"
               type="text"
               name="year"
               id="year"
               placeholder="YYYY"
               required
             />
-            <div class="Msg" id="yearMsg"></div>
+            <div class="age-form__msg Msg" id="yearMsg"></div>
           </div>
-          <div class="btn">
+
+          <div class="age-form__submit btn">
             <button
+              class="age-form__button"
               type="button"
               name="submit"
               value="Submit"
               onclick="ageCount()"
+              aria-label="Calculate age"
             ></button>
           </div>
         </form>
       </div>
 
-      <div class="result-container">
-        <div class="result-div">
-          <span id="years" class="result">--</span
-          ><span class="result-text"> years</span>
+      <!-- Results -->
+      <div class="age-app__results result-container">
+        <div class="age-result result-div">
+          <span id="years" class="age-result__value result">--</span>
+          <span class="age-result__label result-text"> years</span>
         </div>
-        <div class="result-div">
-          <span id="months" class="result">--</span
-          ><span class="result-text"> months</span>
+
+        <div class="age-result result-div">
+          <span id="months" class="age-result__value result">--</span>
+          <span class="age-result__label result-text"> months</span>
         </div>
-        <div class="result-div">
-          <span id="days" class="result">--</span
-          ><span class="result-text"> days</span>
+
+        <div class="age-result result-div">
+          <span id="days" class="age-result__value result">--</span>
+          <span class="age-result__label result-text"> days</span>
         </div>
       </div>
     </section>
