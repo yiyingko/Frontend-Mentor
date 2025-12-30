@@ -15,24 +15,37 @@
     <title>Frontend Mentor | Conference ticket generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="backbround-img">
-    <header>
-      <img src="assets/images/logo-full.svg" alt="conference name and logo" />
+
+  <body class="backbround-img ticket-app">
+    <!-- Header -->
+    <header class="ticket-app__header">
+      <img
+        src="assets/images/logo-full.svg"
+        alt="conference name and logo"
+      />
     </header>
-    <main>
+
+    <main class="ticket-app__main">
       <!-- Form starts -->
-      <div class="main-container">
-        <h1>
+      <section class="ticket-form main-container">
+        <h1 class="ticket-form__title">
           Your Journey to Coding Conf<br />
           2025 Starts Here!
         </h1>
-        <p>Secure your spot at next year's biggest coding conference.</p>
-        <form>
-          <div id="drop-area-container">
-            <label for="input-file" id="drop-area"
-              >Upload Avatar
+        <p class="ticket-form__subtitle">
+          Secure your spot at next year's biggest coding conference.
+        </p>
 
-              <div class="dropBox">
+        <form class="ticket-form__form">
+          <!-- Avatar upload -->
+          <div
+            class="ticket-form__upload drop-area-container"
+            id="drop-area-container"
+          >
+            <label for="input-file" id="drop-area">
+              Upload Avatar
+
+              <div class="ticket-form__dropbox dropBox">
                 <input
                   type="file"
                   accept="image/*"
@@ -41,32 +54,33 @@
                   hidden
                 />
                 <div id="image-view">
-                  <img id="upload-icon" src="assets/images/icon-upload.svg" />
+                  <img
+                    id="upload-icon"
+                    src="assets/images/icon-upload.svg"
+                    alt="upload icon"
+                  />
                 </div>
-                <p class="drop-area-text">Drag and drop or click to upload</p>
-                <div class="alt-btn display-none chg-btn">Change image</div>
+                <p class="drop-area-text">
+                  Drag and drop or click to upload
+                </p>
+                <div class="alt-btn display-none chg-btn">
+                  Change image
+                </div>
               </div>
             </label>
           </div>
+
           <div
-            class="alt-btn display-none rmv-btn"
+            class="alt-btn display-none rmv-btn ticket-form__remove"
             onClick="removeImg()"
             id="remove-button"
           >
             Remove image
           </div>
-          <div class="img-info">
+
+          <!-- Image info -->
+          <div class="ticket-form__info img-info">
             <div>
-              <!-- <img
-                class="info-icon"
-                src="assets/images/icon-info.svg"
-                alt="info-icon"
-              />
-              <img
-                class="info-icon-err hidden"
-                src="assets/images/icon-info-err.svg"
-                alt="red-info-icon"
-              /> -->
               <svg
                 class="info-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,6 +103,7 @@
                   d="M8.004 10.462V7.596M8 5.569v-.042"
                 />
               </svg>
+
               <svg
                 class="info-icon-err hidden"
                 xmlns="http://www.w3.org/2000/svg"
@@ -115,19 +130,32 @@
                 />
               </svg>
             </div>
-            <span class="info-msg"
-              >Upload your photo (JPG or PNG, max size: 500KB)</span
-            >
+
+            <span class="info-msg">
+              Upload your photo (JPG or PNG, max size: 500KB)
+            </span>
           </div>
-          <div class="submit-info">
+
+          <!-- User info -->
+          <div class="ticket-form__fields submit-info">
             <label for="name">Full Name</label>
-            <input type="text" name="name" id="name" maxlength="25" required />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              maxlength="25"
+              required
+            />
             <div class="error-msg hidden" id="nameMsg">
-              <img src="assets/images/icon-info-err.svg" alt="red-info-icon" />
-              <span class="err-text"
-                >alphabetic characters only, max length 25</span
-              >
+              <img
+                src="assets/images/icon-info-err.svg"
+                alt="error icon"
+              />
+              <span class="err-text">
+                alphabetic characters only, max length 25
+              </span>
             </div>
+
             <label for="email">Email:</label>
             <input
               type="email"
@@ -139,9 +167,13 @@
             <div class="error-msg hidden" id="emailMsg">
               <img
                 src="assets/images/icon-info-err.svg"
-                alt="red-info-icon"
-              /><span class="err-text">please enter correct email address</span>
+                alt="error icon"
+              />
+              <span class="err-text">
+                please enter correct email address
+              </span>
             </div>
+
             <label for="github">GitHub Username</label>
             <input
               type="text"
@@ -153,39 +185,57 @@
             <div class="error-msg hidden" id="githubMsg">
               <img
                 src="assets/images/icon-info-err.svg"
-                alt="red-info-icon"
-              /><span class="err-text">github account @youraccountname</span>
+                alt="error icon"
+              />
+              <span class="err-text">
+                github account @youraccountname
+              </span>
             </div>
-            <button class="submit" type="button" name="submit" value="Submit">
+
+            <button
+              class="submit ticket-form__submit"
+              type="button"
+              name="submit"
+              value="Submit"
+            >
               Generate My Ticket
             </button>
           </div>
         </form>
-      </div>
+      </section>
       <!-- Form ends -->
 
-      <!-- Generated tickets starts -->
-      <div class="ticket-container hidden">
-        <h1>
-          Congrats,<span class="h1-name">Jonatan Kristof</span>!<br />
+      <!-- Generated ticket starts -->
+      <section class="ticket-output ticket-container hidden">
+        <h1 class="ticket-output__title">
+          Congrats,
+          <span class="h1-name">Jonatan Kristof</span>!<br />
           Your ticket is ready.
         </h1>
-        <p class="ticket-p">
-          We've emailed your ticket to <br /><span class="p-email"
-            >jonason@gmail.com</span
-          >
-          and will send updates in<br />the run up to the event.
+
+        <p class="ticket-output__subtitle ticket-p">
+          We've emailed your ticket to <br />
+          <span class="p-email">jonason@gmail.com</span>
+          and will send updates in<br />
+          the run up to the event.
         </p>
-        <div class="ticket-img-wrapper">
+
+        <div class="ticket-output__card ticket-img-wrapper">
           <div class="grid-items ticket-title">
             <div class="ticket-icon">
-              <img src="assets/images/logo-mark.svg" alt="ticket-icon" />
+              <img
+                src="assets/images/logo-mark.svg"
+                alt="ticket icon"
+              />
             </div>
             <div>
               <div class="ticket-heading">Coding Conf</div>
-              <div class="ticket-date">Jan 31, 2025 / Austin, TX</div>
+              <div class="ticket-date">
+                Jan 31, 2025 / Austin, TX
+              </div>
             </div>
           </div>
+
           <div class="grid-items visitor">
             <div class="visitor-photo"></div>
             <div class="visitor-info">
@@ -200,10 +250,13 @@
               </div>
             </div>
           </div>
-          <div class="grid-items ticket-number"><span>#01609</span></div>
+
+          <div class="grid-items ticket-number">
+            <span>#01609</span>
+          </div>
         </div>
-      </div>
-      <!-- Generated tickets ends -->
+      </section>
+      <!-- Generated ticket ends -->
     </main>
     <footer class="attribution">
       Challenge by
