@@ -18,19 +18,49 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="chart">
-      <div class="balance"><div class="balance-text">My balance<br /><span class="balance-sum"> $921.48</span></div></div>
-      <div class="gragh">
-        <h1>Spending - Last 7 days</h1>
-        <canvas id="myChart"></canvas>
-        <div class="total"><div class="total-text"><div class="text-1">Total this month<br /><span class="total-month">$478.33<span></div><div class="text-2"><span class="percentage">+2.4%</span><br /> from last month</div></div></div>
-      </div>
+    <div class="expenses chart">
+      <!-- Balance header -->
+      <header class="expenses__balance balance">
+        <div class="expenses__balance-text balance-text">
+          My balance<br />
+          <span class="expenses__balance-sum balance-sum">$921.48</span>
+        </div>
+      </header>
+
+      <!-- Chart section -->
+      <main class="expenses__panel gragh">
+        <h1 class="expenses__title">Spending - Last 7 days</h1>
+
+        <div class="expenses__chart">
+          <canvas id="myChart"></canvas>
+        </div>
+
+        <!-- Totals -->
+        <footer class="expenses__total total">
+          <div class="expenses__total-text total-text">
+            <div class="expenses__month text-1">
+              Total this month<br />
+              <span class="expenses__month-sum total-month">$478.33</span>
+            </div>
+
+            <div class="expenses__change text-2">
+              <span class="expenses__percentage percentage">+2.4%</span><br />
+              from last month
+            </div>
+          </div>
+        </footer>
+      </main>
     </div>
-    <div>
-      <div class="chart_types">
-         <button onclick="setChartType('bar')">B</button>
-         <button onclick="setChartType('line')">L</button>
-      </div>
+
+    <!-- Chart type controls -->
+    <div class="expenses__controls chart_types">
+      <button class="expenses__control-btn" onclick="setChartType('bar')">
+        B
+      </button>
+      <button class="expenses__control-btn" onclick="setChartType('line')">
+        L
+      </button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="app.js"></script>
   </body>
