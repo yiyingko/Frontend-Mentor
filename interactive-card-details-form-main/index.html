@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+      Legacy project (2024)
+      Original styles preserved.
+      Class names lightly annotated for readability and structure clarity.
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -17,40 +22,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="grid-item card-img">
-        <div class="card-front">
-          <div class="front-1">
-            <span class="icon hidden" id="visa"
-              ><img src="images/visa_icon.png" alt="visa-icon"
-            /></span>
-            <span class="icon hidden" id="mastercard"
-              ><img src="images/mastercard_icon.png" alt="mastercard-icon"
-            /></span>
-            <span class="icon hidden" id="jcb"
-              ><img src="images/jcb_icon.png" alt="jcb-icon"
-            /></span>
+      <div class="card-app container">
+      <!-- Card preview (left) -->
+      <div class="card-app__preview grid-item card-img">
+        <div class="card-preview card-front">
+          <div class="card-preview__logos front-1">
+            <span class="card-preview__brand icon hidden" id="visa">
+              <img src="images/visa_icon.png" alt="visa-icon" />
+            </span>
+            <span class="card-preview__brand icon hidden" id="mastercard">
+              <img src="images/mastercard_icon.png" alt="mastercard-icon" />
+            </span>
+            <span class="card-preview__brand icon hidden" id="jcb">
+              <img src="images/jcb_icon.png" alt="jcb-icon" />
+            </span>
           </div>
-          <div class="front-2 cardNumberCard">0000 0000 0000 0000</div>
-          <div class="front-3">
-            <span class="nameCard">Jane Appleseed</span>
-            <div>
-              <span class="monthNumberCard">00</span>/<span
-                class="yearNumberCard"
+
+          <div class="card-preview__number front-2 cardNumberCard">
+            0000 0000 0000 0000
+          </div>
+
+          <div class="card-preview__footer front-3">
+            <span class="card-preview__name nameCard">Jane Appleseed</span>
+            <div class="card-preview__expiry">
+              <span class="monthNumberCard">00</span>/<span class="yearNumberCard"
                 >00</span
               >
             </div>
           </div>
         </div>
-        <div class="card-back">
-          <div class="three-zero cvcNumberCard">000</div>
+
+        <div class="card-preview card-back">
+          <div class="card-preview__cvc three-zero cvcNumberCard">000</div>
         </div>
       </div>
-      <div class="grid-item card-form rightCol">
-        <form id="form">
+
+      <!-- Form (right) -->
+      <div class="card-app__form grid-item card-form rightCol">
+        <form class="card-form__form" id="form">
+          <!-- Cardholder Name -->
           <label>Cardholder Name</label>
           <input
-            class="details-input"
+            class="card-form__input details-input"
             type="text"
             name="name"
             id="name"
@@ -60,10 +73,14 @@
             maxlength="40"
             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
           />
-          <div class="msg" id="nameMsg"></div>
-          <div class="card-logo"><label>Card Number</label></div>
+          <div class="card-form__msg msg" id="nameMsg"></div>
+
+          <!-- Card Number -->
+          <div class="card-form__label-row card-logo">
+            <label>Card Number</label>
+          </div>
           <input
-            class="details-input card-number"
+            class="card-form__input details-input card-number"
             type="text"
             name="number"
             id="cardNumber"
@@ -72,14 +89,17 @@
             maxlength="19"
             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
           />
-          <div class="msg" id="cardNumberMsg"></div>
-          <div class="card-details">
-            <div class="exp-date">
+          <div class="card-form__msg msg" id="cardNumberMsg"></div>
+
+          <!-- Expiry + CVC -->
+          <div class="card-form__row card-details">
+            <!-- Exp Date -->
+            <div class="card-form__field exp-date">
               <label>Exp. Date (MM/YY)</label>
-              <div class="exp">
-                <div class="exp-wrapper">
+              <div class="card-form__exp exp">
+                <div class="card-form__exp-col exp-wrapper">
                   <input
-                    class="exp-input"
+                    class="card-form__input exp-input"
                     inputmode="numeric"
                     name="month"
                     id="monthNumber"
@@ -88,11 +108,12 @@
                     required
                     maxlength="2"
                   />
-                  <div class="msg" id="monthNumberMsg"></div>
+                  <div class="card-form__msg msg" id="monthNumberMsg"></div>
                 </div>
-                <div class="exp-wrapper">
+
+                <div class="card-form__exp-col exp-wrapper">
                   <input
-                    class="exp-input"
+                    class="card-form__input exp-input"
                     inputmode="numeric"
                     name="year"
                     id="yearNumber"
@@ -101,15 +122,17 @@
                     required
                     maxlength="2"
                   />
-                  <div class="msg" id="yearNumberMsg"></div>
+                  <div class="card-form__msg msg" id="yearNumberMsg"></div>
                 </div>
               </div>
             </div>
-            <div class="cvc">
+
+            <!-- CVC -->
+            <div class="card-form__field cvc">
               <label>CVC</label>
-              <div class="cvc-wrapper">
+              <div class="card-form__cvc cvc-wrapper">
                 <input
-                  class="exp-input cvc-input"
+                  class="card-form__input exp-input cvc-input"
                   inputmode="numeric"
                   name="cvc"
                   id="cvcNumber"
@@ -118,43 +141,44 @@
                   required
                   maxlength="3"
                 />
-                <div class="msg" id="cvcNumberMsg"></div>
+                <div class="card-form__msg msg" id="cvcNumberMsg"></div>
               </div>
             </div>
           </div>
-          <button type="button" class="submit">Confirm</button>
-          <p class="test-number">
+
+          <button type="button" class="card-form__submit submit">Confirm</button>
+
+          <p class="card-form__test-numbers test-number">
             <br />JCB: 3550998650131033<br />
             VISA: 4012888888881881<br />
             Mastercard: 5555555555554444
           </p>
         </form>
       </div>
-      <div class="grid-item card-form rightCol-2 hidden">
-        <div class="completed">
-          <div class="complete-wrap">
+
+      <!-- Completed state (right, hidden by default) -->
+      <div class="card-app__completed grid-item card-form rightCol-2 hidden">
+        <div class="card-complete completed">
+          <div class="card-complete__icon-wrap complete-wrap">
             <img
-              class="complete-logo"
+              class="card-complete__icon complete-logo"
               src="images/icon-complete.svg"
               alt="click"
             />
           </div>
-          <div>
+
+          <div class="card-complete__text">
             <h1>Thank you!</h1>
             <br />
             <p>We've added your card details</p>
           </div>
-          <button type="button" class="continue">Continue</button>
+
+          <button type="button" class="card-complete__continue continue">
+            Continue
+          </button>
         </div>
       </div>
     </div>
-
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
     <script src="app.js"></script>
   </body>
 </html>
